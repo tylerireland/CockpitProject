@@ -4,7 +4,7 @@ int main()
 {
 
 
-	std::cout << "fuck you" << std::endl;
+	std::cout << "bruh" << std::endl;
 
 
 }
