@@ -3,7 +3,9 @@
 
 
 ( MyStation
-#line 7 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+
+	ownship: player
+#line 8 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
 #line 1 "display.epp"
 
 
@@ -48,8 +50,8 @@ display:
 
 
 )
-#line 8 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-#line 10 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 9 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 11 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
 #line 1 "simulation.epp"
 
 
@@ -83,6 +85,6 @@ player:
 
 
 )
-#line 11 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 12 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
 
 )

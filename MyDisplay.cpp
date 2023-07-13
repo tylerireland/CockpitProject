@@ -14,11 +14,13 @@
 #include "mixr/models/sensor/Tws.hpp"
 
 #include "mixr/simulation/Simulation.hpp"
+#include "mixr/simulation/Station.hpp"
 
 #include "mixr/base/numeric/Boolean.hpp"
 #include "mixr/base/Pair.hpp"
 #include "mixr/base/PairStream.hpp"
 #include "mixr/graphics/SymbolLoader.hpp"
+#include "MyAircraft.hpp"
 #include <GL/glut.h>
 
 IMPLEMENT_SUBCLASS(MyDisplay, "MyDisplay")
@@ -32,7 +34,28 @@ MyDisplay::MyDisplay()
 
 void MyDisplay::copyData(const MyDisplay& org, const bool)
 {
+	
 	BaseClass::copyData(org);
+}
+
+void MyDisplay ::updateTC(const double dt)
+{
+	BaseClass::updateTC(dt);
+}
+
+void MyDisplay::updateData(const double dt)
+{
+	mixr::simulation::Station* station = dynamic_cast<mixr::simulation::Station*>(container());
+	if (station != nullptr)
+	{
+		MyAircraft* player = dynamic_cast<MyAircraft*>(station->getOwnship());
+
+		if (player != nullptr)
+		{
+			std::cout << player->getTotalVelocity() << std::endl;
+		}
+	}
+	BaseClass::updateData(dt);
 }
 
 void MyDisplay::reset()
