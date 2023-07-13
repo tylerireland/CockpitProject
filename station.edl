@@ -1,0 +1,60 @@
+#line 1 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+
+
+
+( MyStation
+#line 7 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 1 "display.epp"
+
+
+
+
+display:
+( MyDisplay
+
+	name: "Cockpit Display"
+
+	left: -10
+	right: 10
+	bottom: -10
+	top: 10
+
+
+	vpX: 0
+	vpY: 0
+	vpWidth: 800
+	vpHeight: 800
+
+	clearDepth: 20.0
+
+	clearColor: ( rgb 0.9 0.9 1 )
+
+	components:
+	{
+
+
+
+
+	}
+
+
+)
+#line 8 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 10 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+#line 1 "simulation.epp"
+
+
+
+simulation:
+( MySimulation
+
+
+
+
+)
+#line 11 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
+
+
+
+
+)

@@ -4,6 +4,7 @@
 #define __MyStation_H__
 
 #include "mixr/simulation/Station.hpp"
+#include "MyDisplay.hpp"
 
 class MyStation : public mixr::simulation::Station
 {
@@ -19,6 +20,12 @@ public:
 
 private:
 
+	MyDisplay* display{};
+	bool displayInit{};    // is our display created?
+
+
+
+	bool setSlotDisplay(MyDisplay*);
 
 };
 
