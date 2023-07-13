@@ -3,11 +3,11 @@
 #ifndef __MySimualtion_H__
 #define __MySimulation_H__
 
-#include "mixr/simulation/Simulation.hpp"
+#include "mixr/models/WorldModel.hpp"
 
-class MySimulation : public mixr::simulation::Simulation
+class MySimulation : public mixr::models::WorldModel
 {
-	DECLARE_SUBCLASS(MySimulation, mixr::simulation::Simulation)
+	DECLARE_SUBCLASS(MySimulation, mixr::models::WorldModel)
 
 
 public:

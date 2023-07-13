@@ -27,6 +27,9 @@
     <ClInclude Include="factory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyAircraft.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyDisplay.cpp">
@@ -44,10 +47,14 @@
     <ClCompile Include="factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyAircraft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="station.epp" />
     <None Include="display.epp" />
     <None Include="simulation.epp" />
+    <None Include="player.epp" />
   </ItemGroup>
 </Project>

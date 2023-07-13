@@ -1,0 +1,17 @@
+player:
+( MyAircraft
+    id: 11
+    side: blue
+    type: "F-16C"
+    signature: ( SigSphere radius: 2.0 )
+    initXPos: ( NauticalMiles 0.25 )
+    initYPos: ( NauticalMiles 0 )
+    initAlt: ( Feet 5000 )
+    initHeading: ( Degrees 0.0 )      // Initial heading
+    initVelocity: 250
+    positionFreeze: 0
+    components: {
+        pilot:
+        ( Autopilot )
+    }
+)

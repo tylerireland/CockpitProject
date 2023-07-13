@@ -131,6 +131,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="factory.hpp" />
+    <ClInclude Include="MyAircraft.hpp" />
     <ClInclude Include="MyDisplay.hpp" />
     <ClInclude Include="MySimulation.hpp" />
     <ClInclude Include="MyStation.hpp" />
@@ -138,12 +139,14 @@
   <ItemGroup>
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyAircraft.cpp" />
     <ClCompile Include="MyDisplay.cpp" />
     <ClCompile Include="MySimulation.cpp" />
     <ClCompile Include="MyStation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="display.epp" />
+    <None Include="player.epp" />
     <None Include="simulation.epp" />
     <None Include="station.epp" />
   </ItemGroup>

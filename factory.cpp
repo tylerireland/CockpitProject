@@ -6,6 +6,7 @@
 #include "MyStation.hpp"
 #include "MyDisplay.hpp"
 #include "MySimulation.hpp"
+#include "MyAircraft.hpp"
 
 #include "xpanel/factory.hpp"
 
@@ -37,6 +38,9 @@ mixr::base::Object* factory(const std::string& name)
     }
     else if (name == MySimulation::getFactoryName()) {
         obj = new MySimulation();
+    }
+    else if (name == MyAircraft::getFactoryName()) {
+        obj = new MyAircraft();
     }
 
     // example libraries
