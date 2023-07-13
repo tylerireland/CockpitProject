@@ -24,7 +24,16 @@ display:
 
 	components:
 	{
-		
+		( Polygon 
+            color: black
+            transform: ( Translation 0 0 )               
+            vertices: {
+                [ -2.05 -1.05 ]
+                [ -2.05  1.05 ]
+                [  2.05  1.05 ]
+                [  2.05 -1.05 ] 
+            } 
+        )
 		
 	
 	
