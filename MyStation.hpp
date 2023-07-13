@@ -5,7 +5,7 @@
 
 #include "mixr/simulation/Station.hpp"
 
-class MyStation : mixr::simulation::Station
+class MyStation : public mixr::simulation::Station
 {
 	DECLARE_SUBCLASS(MyStation, mixr::simulation::Station)
 
@@ -13,7 +13,9 @@ class MyStation : mixr::simulation::Station
 public:
 	MyStation();
 
+
 	void reset() final;
+	
 
 private:
 

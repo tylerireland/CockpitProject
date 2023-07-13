@@ -7,7 +7,7 @@
 #include "MyDisplay.hpp"
 #include "MySimulation.hpp"
 
-//#include "xpanel/factory.hpp"
+#include "xpanel/factory.hpp"
 
 // factories
 #include "../shared/xzmq/factory.hpp"
@@ -39,7 +39,7 @@ mixr::base::Object* factory(const std::string& name)
     }
 
     // example libraries
-    //if (obj == nullptr) obj = mixr::xpanel::factory(name);
+    if (obj == nullptr) obj = mixr::xpanel::factory(name);
     if (obj == nullptr) obj = mixr::xzmq::factory(name);
 
     // framework libraries

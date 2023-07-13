@@ -5,7 +5,7 @@
 
 #include "mixr/simulation/Simulation.hpp"
 
-class MySimulation : mixr::simulation::Simulation
+class MySimulation : public mixr::simulation::Simulation
 {
 	DECLARE_SUBCLASS(MySimulation, mixr::simulation::Simulation)
 

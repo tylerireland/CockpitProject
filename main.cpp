@@ -2,7 +2,7 @@
 // Util 
 #include "factory.hpp"
 #include "mixr/base/edl_parser.hpp"
-
+#include "mixr/base/util/system_utils.hpp"
 
 // Objects
 #include "MyDisplay.hpp"
@@ -12,6 +12,7 @@
 
 // Other
 #include <string>
+#include <GL/glut.h>
 
 
 const int BG_RATE{ 10 };
@@ -52,9 +53,56 @@ MyStation* builder(const std::string& filename)
 
 
 }
-int main()
+
+void updateDataCB(int msecs)
 {
+    glutTimerFunc(msecs, updateDataCB, msecs);
 
+    // current time
+    const double time{ mixr::base::getComputerTime() };
 
+    // compute delta time
+    static double time0{ time };   // N-1 Time
+    const double dt{ time - time0 };
+    time0 = time;
 
+    station->updateData(dt);
+}
+
+int main(int argc, char* argv[])
+{
+    glutInit(&argc, argv);
+
+    // default configuration filename
+    std::string configFilename = "test1.edl";
+    // parse arguments
+    for (int i = 1; i < argc; i++) {
+        if (std::string(argv[i]) == "-f") {
+            configFilename = argv[++i];
+        }
+    }
+
+    // build a station
+    station = builder(configFilename);
+
+    // reset the simulation
+    station->event(mixr::base::Component::RESET_EVENT);
+
+    // set timer for the background tasks
+    const double dt{ 1.0 / static_cast<double>(BG_RATE) };
+    const int msecs{ static_cast<int>(dt * 1000) };
+
+    // ensure everything is reset
+    station->updateData(dt);
+    station->updateTC(dt);
+
+    glutTimerFunc(msecs, updateDataCB, msecs);
+
+    // create the time critical thread
+    station->createTimeCriticalProcess();
+
+    // main loop
+    glutMainLoop();
+
+    return 0;
 }

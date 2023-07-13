@@ -14,7 +14,7 @@ void MySimulation::copyData(const MySimulation& org, const bool)
 	BaseClass::copyData(org);
 }
 
-void MySimulation::updateTC(const double dt = 0.0)
+void MySimulation::updateTC(const double dt)
 {
 	BaseClass::updateTC(dt);
 }
