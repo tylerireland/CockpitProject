@@ -1,11 +1,22 @@
-#ifndef __MySimualtion_H__
-#define __MySimulation_H__
+//Custom Station Class
 
-#include "mixr/simulation/Simulation.hpp"
+#ifndef __MyStation_H__
+#define __MyStation_H__
 
-class MySimulation : mixr::simulation::Simulation
+#include "mixr/simulation/Station.hpp"
+
+class MyStation : mixr::simulation::Station
 {
-	DECLARE_SUBCLASS(MySimulation, mixr::simulation::Simulation)
+	DECLARE_SUBCLASS(MyStation, mixr::simulation::Station)
+
+
+public:
+	MyStation();
+
+
+private:
+
+
 };
 
 #endif
