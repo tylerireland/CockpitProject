@@ -13,6 +13,7 @@ class MyStation : mixr::simulation::Station
 public:
 	MyStation();
 
+	void reset() final;
 
 private:
 

@@ -1,0 +1,15 @@
+
+// Main Station, contains all other epp files.
+
+( MyStation
+
+	// Display
+	#include "display.epp"
+
+	// Simulation
+	#include "simulation.epp"
+
+
+
+
+)

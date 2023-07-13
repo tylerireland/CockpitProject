@@ -1,0 +1,34 @@
+
+
+// Holds all components of the cockpit
+
+display: 
+( MyDisplay
+
+	name: "Cockpit Display"
+
+	left:		-10
+	right:		 10
+	bottom:		-10
+	top:		 10
+	
+
+	vpX:		 0
+	vpY:		 0
+	vpWidth:	 800
+	vpHeight:	 800
+
+	clearDepth:  20.0
+					
+	clearColor:	 ( rgb 0.9 0.9 1 ) // Dark Blue
+
+	components:
+	{
+		
+		
+	
+	
+	}
+
+
+)

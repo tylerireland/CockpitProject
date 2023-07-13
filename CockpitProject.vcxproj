@@ -129,16 +129,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="factory.hpp" />
     <ClInclude Include="MyDisplay.hpp" />
     <ClInclude Include="MySimulation.hpp" />
     <ClInclude Include="MyStation.hpp" />
     <ClInclude Include="test.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="factory.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyDisplay.cpp" />
     <ClCompile Include="MySimulation.cpp" />
     <ClCompile Include="MyStation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="display.epp" />
+    <None Include="simulation.epp" />
+    <None Include="station.epp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

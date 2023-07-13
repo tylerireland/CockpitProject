@@ -13,7 +13,7 @@ class MyDisplay : public mixr::glut::GlutDisplay
 public:
 	MyDisplay();
 
-	void updateData(const double dt = 0.0) final;
+	void reset() final;
 
 private:
 
