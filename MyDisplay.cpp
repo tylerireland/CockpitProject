@@ -1,4 +1,25 @@
 #include "MyDisplay.hpp"
+#include "xpanel/DspRadar.hpp"
+#include "xpanel/DspRwr.hpp"
+#include "xpanel/Pfd.hpp"
+
+#include "mixr/models/player/air/AirVehicle.hpp"
+#include "mixr/models/player/weapon/Missile.hpp"
+
+#include "mixr/models/system/Jammer.hpp"
+#include "mixr/models/system/Radar.hpp"
+#include "mixr/models/system/Rwr.hpp"
+#include "mixr/models/system/StoresMgr.hpp"
+#include "mixr/models/sensor/Gmti.hpp"
+#include "mixr/models/sensor/Tws.hpp"
+
+#include "mixr/simulation/Simulation.hpp"
+
+#include "mixr/base/numeric/Boolean.hpp"
+#include "mixr/base/Pair.hpp"
+#include "mixr/base/PairStream.hpp"
+#include "mixr/graphics/SymbolLoader.hpp"
+#include <GL/glut.h>
 
 IMPLEMENT_SUBCLASS(MyDisplay, "MyDisplay")
 EMPTY_SLOTTABLE(MyDisplay)
