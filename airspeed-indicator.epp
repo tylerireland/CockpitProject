@@ -1,8 +1,8 @@
 
-
+airspeed-indicator:
 ( Graphic
 
-	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
+	transform: { ( Translation -4 -4 ) ( Scale 0.5 ) }
 
 	components:
 	{

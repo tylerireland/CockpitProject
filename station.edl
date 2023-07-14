@@ -33,6 +33,11 @@ display:
 
 	normalFont: digital
 
+	textures: {
+        falcon: ( BitmapTexture width: 1024 height: 512 path:  "../../mixr-data/textures/"  file: "newfalcon.bmp" )
+        t2: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "Green_Veined_Marble.bmp" )
+    }
+
 	fonts:
 	{
 		normal:
@@ -71,12 +76,182 @@ display:
 
 	components:
 	{
-#line 67 "display.epp"
+#line 70 "display.epp"
+#line 1 "heading-indicator.epp"
+( Graphic
+
+	transform: { ( Translation -4 5 ) ( Scale 0.5 ) }
+
+	components:
+	{
+		degrees:
+		( NumericReadout
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -12 0.5 ) ( Scale 4.5 ) }
+			format: ###
+		)
+
+		heading:
+		( AsciiText
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation 2.5 -2 ) ( Scale 7.0 ) }
+			text: "N"
+		)
+
+		( AsciiText
+			font: starwars
+			color: ( rgb 1 1 1 )
+			transform: { ( Translation -7 -1.5 ) ( Scale 0.75 ) }
+			text: "DEGREES"
+		)
+
+		( Circle
+			color: ( rgb 0 0 0 )
+			filled: true
+			radius: 4.0
+			transform: { ( Translation 5.5 0 ) }
+
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.3 )
+			filled: true
+			radius: 4.1
+			transform: { ( Translation 5.5 0 ) }
+
+		)
+		( Polygon
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation -4 2 ) }
+			vertices:
+			{
+				[-5 -2.25]
+				[-5 2.25]
+				[ 5 2.25]
+				[ 5 -2.25]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.1 0.1 0.3 )
+			transform: { ( Translation -4 2 ) }
+			vertices:
+			{
+				[-5.1 -2.35]
+				[-5.1 2.35]
+				[ 5.1 2.35]
+				[ 5.1 -2.35]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.05 0.05 0.1 )
+			transform: { ( Translation 0 0 ) }
+			vertices:
+			{
+				[-10 -5]
+				[-10 5]
+				[10 5]
+				[10 -5]
+			}
+		)
+
+	}
+
+
+
+)
+#line 71 "display.epp"
+#line 1 "airspeed-indicator.epp"
+
+
+( Graphic
+
+	transform: { ( Translation -4 -4 ) ( Scale 0.5 ) }
+
+	components:
+	{
+		( AsciiText
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -6 4 ) ( Scale 3.0 ) }
+			text: "KNOTS"
+		)
+
+		knots:
+		( NumericReadout
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -15 -5 ) ( Scale 10.0 ) }
+			format: ####
+		)
+
+		( Circle
+			radius: 9.0
+			slices: 20
+			color: ( rgb 0 0 0 )
+			filled: true
+			transform: ( Translation 0 0)
+		)
+
+		( Circle
+			radius: 9.1
+			slices: 20
+			color: ( rgb 0.1 0.1 0.3 )
+			filled: true
+			transform: ( Translation 0 0)
+		)
+
+
+
+		( Circle
+			radius: 0.4
+			slices: 6
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			transform: { ( Translation 6.8 6.5) ( Rotation 27 ) }
+		)
+
+		( Circle
+			radius: 0.4
+			slices: 6
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			transform: { ( Translation -6.8 6.5) ( Rotation -27 ) }
+		)
+
+		( Circle
+			radius: 0.4
+			slices: 6
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			transform: { ( Translation 6.8 -6.5) ( Rotation -27 ) }
+		)
+
+		( Circle
+			radius: 0.4
+			slices: 6
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			transform: { ( Translation -6.8 -6.5) ( Rotation 27 ) }
+		)
+
+
+
+		( Circle
+			radius: 10.0
+			slices: 20
+			color: ( rgb 0.05 0.05 0.1 )
+			filled: true
+			transform: ( Translation 0 0 )
+		)
+
+	}
+)
+#line 72 "display.epp"
 #line 1 "altimeter_and_vsi.epp"
 
 ( Graphic
 
-
+	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
 
 	components:
 	{
@@ -234,9 +409,32 @@ display:
 		)
 	}
 )
-#line 68 "display.epp"
+#line 73 "display.epp"
 
 
+
+
+
+
+		( Polygon
+			color: white
+
+
+			vertices:
+			{
+				[-10 -10]
+				[-10 10]
+				[10 10]
+				[10 -10]
+			}
+
+			texCoord: {
+                [ 1.0 1.0 ]
+                [ 0.0 1.0 ]
+                [ 0.0 0.0 ]
+                [ 1.0 0.0 ]
+            }
+		)
 	}
 
 

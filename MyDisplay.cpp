@@ -52,7 +52,7 @@ void MyDisplay::updateData(const double dt)
 
 		if (player != nullptr)
 		{
-			std::cout << player->getTotalVelocity() << std::endl;
+			//std::cout << player->getTotalVelocity() << std::endl;
 		}
 	}
 	BaseClass::updateData(dt);

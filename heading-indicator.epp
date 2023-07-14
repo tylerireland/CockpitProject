@@ -1,6 +1,8 @@
+
+heading-indicator:
 ( Graphic
 
-	transform: { ( Translation -4 4 ) ( Scale 0.5 ) }
+	transform: { ( Translation -4 5 ) ( Scale 0.5 ) }
 
 	components:
 	{
