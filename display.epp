@@ -13,28 +13,58 @@ display:
 	top:		 10
 	
 
-	vpX:		 0
-	vpY:		 0
-	vpWidth:	 800
-	vpHeight:	 800
+	vpX:		 1200
+	vpY:		 10
+	vpWidth:	 1300
+	vpHeight:	 1300
 
 	clearDepth:  20.0
 					
 	clearColor:	 ( rgb 0.9 0.9 1 ) // Dark Blue
 
+	normalFont: digital
+
+	fonts: 
+	{
+		normal:
+		( FTGLHaloFont
+			fontPosition: [ -10 10 ]
+			path: MIXR_DATA_FONT_PATH
+			file: "arialn.ttf"
+			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+			linewidth: 5
+			fontWidth: 1.5
+			fontHeight: 1.0
+		)    
+		
+		digital:
+		( FTGLHaloFont
+			fontPosition: [ -10 10 ]
+			path: MIXR_DATA_FONT_PATH
+			file: "ds-digital.ttf"
+			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+			linewidth: 5
+			fontWidth: 1.5
+			fontHeight: 1.0
+		) 
+
+		starwars:
+		( FTGLHaloFont
+			fontPosition: [ -10 10 ]
+			path: MIXR_DATA_FONT_PATH
+			file: "star-wars.ttf"
+			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+			linewidth: 1
+			fontWidth: 1.7
+			fontHeight: 1.5
+		) 
+	 }
+
 	components:
 	{
-		( Polygon 
-            color: black
-            transform: ( Translation 0 0 )               
-            vertices: {
-                [ -2.05 -1.05 ]
-                [ -2.05  1.05 ]
-                [  2.05  1.05 ]
-                [  2.05 -1.05 ] 
-            } 
-        )
-		
+		//#include "heading-indicator.epp"
+		//#include "airspeed-indicator.epp"
+		#include "altimeter_and_vsi.epp"
 	
 	
 	}
