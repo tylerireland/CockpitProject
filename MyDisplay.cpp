@@ -52,7 +52,11 @@ void MyDisplay::updateData(const double dt)
 
 		if (player != nullptr)
 		{
-			//std::cout << player->getTotalVelocity() << std::endl;
+			
+			mixr::graphics::Graphic* airspeedIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("airspeed-indicator"));
+
+
+
 		}
 	}
 	BaseClass::updateData(dt);
