@@ -145,7 +145,10 @@
     <ClCompile Include="MyStation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="airspeed-indicator.epp" />
+    <None Include="altimeter_and_vsi.epp" />
     <None Include="display.epp" />
+    <None Include="heading-indicator.epp" />
     <None Include="player.epp" />
     <None Include="simulation.epp" />
     <None Include="station.epp" />

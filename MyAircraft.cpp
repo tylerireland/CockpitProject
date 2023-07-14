@@ -13,6 +13,5 @@ MyAircraft::MyAircraft()
 
 void MyAircraft::updateData(const double dt)
 {
-	std::cout << "Hello";
 	BaseClass::updateData(dt);
 }

@@ -3,6 +3,7 @@
 
 ( MyStation
 
+	ownship: player
 	// Display
 	#include "display.epp"
 

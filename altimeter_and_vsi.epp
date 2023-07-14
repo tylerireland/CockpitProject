@@ -1,82 +1,7 @@
-#line 1 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-
-
-
-( MyStation
-
-	ownship: player
-#line 8 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-#line 1 "display.epp"
-
-
-
-
-display:
-( MyDisplay
-
-	name: "Cockpit Display"
-
-	left: -10
-	right: 10
-	bottom: -10
-	top: 10
-
-
-	vpX: 1200
-	vpY: 10
-	vpWidth: 1300
-	vpHeight: 1300
-
-	clearDepth: 20.0
-
-	clearColor: ( rgb 0.9 0.9 1 )
-
-	normalFont: digital
-
-	fonts:
-	{
-		normal:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path:  "../../mixr-data/fonts/"
-			file: "arialn.ttf"
-
-			linewidth: 5
-			fontWidth: 1.5
-			fontHeight: 1.0
-		)
-
-		digital:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path:  "../../mixr-data/fonts/"
-			file: "ds-digital.ttf"
-
-			linewidth: 5
-			fontWidth: 1.5
-			fontHeight: 1.0
-		)
-
-		starwars:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path:  "../../mixr-data/fonts/"
-			file: "star-wars.ttf"
-
-			linewidth: 1
-			fontWidth: 1.7
-			fontHeight: 1.5
-		)
-	 }
-
-	components:
-	{
-#line 67 "display.epp"
-#line 1 "altimeter_and_vsi.epp"
 
 ( Graphic
 
-
+	//transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
 
 	components:
 	{
@@ -84,14 +9,14 @@ display:
 			font: starwars
 			color: ( rgb 1 1 1 )
 			transform: { ( Translation -2 1.5 ) ( Scale 0.75 ) }
-			text: "FEET"
+			text: "FEET"			
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
 			transform: { ( Translation -3.2 -6.7 ) ( Scale 0.75 ) }
-			text: "FEET / SEC"
+			text: "FEET / SEC"			
 		)
 
 
@@ -101,22 +26,22 @@ display:
 			transform: { ( Translation -11 3.2 ) ( Scale 5.0 ) }
 			format: ####
 		)
-
+	
 		vsi:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
 			transform: { ( Translation -11 -4.8 ) ( Scale 5.0 ) }
 			format: ####
 		)
-
-
+		
+		// ============ SCREWS =====================
 
 
 		( AsciiText
 			font: normal
 			color: ( rgb 0 0 0 )
 			transform: { ( Translation 7.1 7.1 ) ( Scale 1.25 ) }
-			text: "+"
+			text: "+"			
 		)
 
 		( Circle
@@ -124,14 +49,14 @@ display:
 			filled: true
 			radius: 0.75
 			transform: { ( Translation 7.5 7.5 ) }
-
+		
 		)
 
 		( AsciiText
 			font: normal
 			color: ( rgb 0 0 0 )
 			transform: { ( Translation 7.1 -7.90 ) ( Scale 1.25 ) }
-			text: "+"
+			text: "+"			
 		)
 
 		( Circle
@@ -139,14 +64,14 @@ display:
 			filled: true
 			radius: 0.75
 			transform: { ( Translation 7.5 -7.5 ) }
-
+		
 		)
 
 		( AsciiText
 			font: normal
 			color: ( rgb 0 0 0 )
 			transform: { ( Translation -7.9 7.1 ) ( Scale 1.25 ) }
-			text: "+"
+			text: "+"			
 		)
 
 		( Circle
@@ -154,14 +79,14 @@ display:
 			filled: true
 			radius: 0.75
 			transform: { ( Translation -7.5 7.5 ) }
-
+		
 		)
 
 		( AsciiText
 			font: normal
 			color: ( rgb 0 0 0 )
 			transform: { ( Translation -7.9 -7.9 ) ( Scale 1.25 ) }
-			text: "+"
+			text: "+"			
 		)
 
 		( Circle
@@ -169,31 +94,31 @@ display:
 			filled: true
 			radius: 0.75
 			transform: { ( Translation -7.5 -7.5 ) }
-
+		
 		)
 
-
+		// =========================================
 		( Polygon
 			color: ( rgb 0 0 0 )
 			transform: { ( Translation 0 5 ) }
 			vertices:
 			{
 				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-6  2.5]
+				[6   2.5]
+				[6  -2.5]
 			}
 		)
-
+		
 		( Polygon
 			color: ( rgb 0.1 0.1 0.3 )
 			transform: { ( Translation 0 5 ) }
 			vertices:
 			{
 				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-6.1  2.6]
+				[6.1   2.6]
+				[6.1  -2.6]
 			}
 		)
 
@@ -203,9 +128,9 @@ display:
 			vertices:
 			{
 				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-6  2.5]
+				[6   2.5]
+				[6  -2.5]
 			}
 		)
 
@@ -215,9 +140,9 @@ display:
 			vertices:
 			{
 				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-6.1  2.6]
+				[6.1   2.6]
+				[6.1  -2.6]
 			}
 		)
 
@@ -227,55 +152,10 @@ display:
 			vertices:
 			{
 				[-10 -10]
-				[-10 10]
-				[10 10]
-				[10 -10]
+				[-10  10]
+				[10   10]
+				[10  -10]
 			}
 		)
 	}
-)
-#line 68 "display.epp"
-
-
-	}
-
-
-)
-#line 9 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-#line 11 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-#line 1 "simulation.epp"
-
-
-
-simulation:
-( MySimulation
-
-	players:
-	{
-#line 9 "simulation.epp"
-#line 1 "player.epp"
-player:
-( MyAircraft
-    id: 11
-    side: blue
-    type: "F-16C"
-    signature: ( SigSphere radius: 2.0 )
-    initXPos: ( NauticalMiles 0.25 )
-    initYPos: ( NauticalMiles 0 )
-    initAlt: ( Feet 5000 )
-    initHeading: ( Degrees 0.0 )
-    initVelocity: 250
-    positionFreeze: 0
-    components: {
-        pilot:
-        ( Autopilot )
-    }
-)
-#line 10 "simulation.epp"
-	}
-
-
-)
-#line 12 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
-
 )

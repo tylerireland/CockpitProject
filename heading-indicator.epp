@@ -1,0 +1,83 @@
+( Graphic
+
+	transform: { ( Translation -4 4 ) ( Scale 0.5 ) }
+
+	components:
+	{
+		degrees:
+		( NumericReadout
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -12 0.5 ) ( Scale 4.5 ) }
+			format: ###
+		)
+		
+		heading:
+		( AsciiText
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation 2.5 -2 ) ( Scale 7.0 ) }
+			text: "N"
+		)
+
+		( AsciiText
+			font: starwars
+			color: ( rgb 1 1 1 )
+			transform: { ( Translation -7 -1.5 ) ( Scale 0.75 ) }
+			text: "DEGREES"			
+		)
+
+		( Circle
+			color: ( rgb 0 0 0 )
+			filled: true
+			radius: 4.0
+			transform: { ( Translation 5.5 0 ) }
+		
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.3 )
+			filled: true
+			radius: 4.1
+			transform: { ( Translation 5.5 0 ) }
+		
+		)
+		( Polygon
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation -4 2 ) }
+			vertices:
+			{
+				[-5  -2.25]
+				[-5   2.25]
+				[ 5   2.25]
+				[ 5  -2.25]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.1 0.1 0.3 )
+			transform: { ( Translation -4 2 ) }
+			vertices:
+			{
+				[-5.1  -2.35]
+				[-5.1   2.35]
+				[ 5.1   2.35]
+				[ 5.1  -2.35]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.05 0.05 0.1 )
+			transform: { ( Translation 0 0 ) }
+			vertices:
+			{
+				[-10 -5]
+				[-10  5]
+				[10   5]
+				[10  -5]
+			}
+		)
+	
+	}
+
+
+
+)

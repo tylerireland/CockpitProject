@@ -5,6 +5,7 @@
 
 #include "mixr/ui/glut/GlutDisplay.hpp"
 
+
 class MyDisplay : public mixr::glut::GlutDisplay
 {
 	DECLARE_SUBCLASS(MyDisplay, mixr::glut::GlutDisplay)
@@ -13,6 +14,8 @@ class MyDisplay : public mixr::glut::GlutDisplay
 public:
 	MyDisplay();
 
+	void updateTC(const double dt = 0.0) final;
+	void updateData(const double dt = 0.0) final;
 	void reset() final;
 
 private:
