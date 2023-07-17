@@ -53,9 +53,10 @@ void MyDisplay::updateData(const double dt)
 		if (player != nullptr)
 		{
 			
-			mixr::graphics::Graphic* airspeedIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("airspeed-indicator"));
+			/*mixr::graphics::Graphic* airspeedIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("airspeed-indicator"));
+			mixr::graphics::Graphic* headingIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("heading-indicator"));*/
 
-
+			std::cout << player->getAltitudeAglFt();
 
 		}
 	}

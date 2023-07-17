@@ -20,6 +20,23 @@ public:
 
 private:
 
+	// Aircraft's altitude (Feet)
+	int altitude{};
+	SendData altitudeRO{};
+
+	// Aircraft's heading (Degrees)
+	int heading{};
+	SendData headingRRO{};
+
+	// Aircraft's speed (Knots)
+	int knots{};
+	SendData knotsRO{};
+
+	// Aircraft's altitude/sec (Feet/Sec)
+	int vsi{};
+	SendData vsiRO{};
+
+
 
 
 };

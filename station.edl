@@ -78,6 +78,8 @@ display:
 	{
 #line 70 "display.epp"
 #line 1 "heading-indicator.epp"
+
+heading-indicator:
 ( Graphic
 
 	transform: { ( Translation -4 5 ) ( Scale 0.5 ) }
@@ -164,7 +166,7 @@ display:
 #line 71 "display.epp"
 #line 1 "airspeed-indicator.epp"
 
-
+airspeed-indicator:
 ( Graphic
 
 	transform: { ( Translation -4 -4 ) ( Scale 0.5 ) }
@@ -249,6 +251,7 @@ display:
 #line 72 "display.epp"
 #line 1 "altimeter_and_vsi.epp"
 
+altimeter-vsi:
 ( Graphic
 
 	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
@@ -410,7 +413,6 @@ display:
 	}
 )
 #line 73 "display.epp"
-
 
 
 

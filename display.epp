@@ -71,7 +71,6 @@ display:
 		#include "airspeed-indicator.epp"
 		#include "altimeter_and_vsi.epp"
 	
-	
 
 
 
