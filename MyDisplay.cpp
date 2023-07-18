@@ -27,6 +27,12 @@ IMPLEMENT_SUBCLASS(MyDisplay, "MyDisplay")
 EMPTY_SLOTTABLE(MyDisplay)
 EMPTY_DELETEDATA(MyDisplay)
 
+BEGIN_EVENT_HANDLER(MyDisplay)
+	ON_EVENT(UPDATE_VALUE, onAlt)
+	ON_EVENT(FORWARD_SPACE, onRight)
+	ON_EVENT(BACK_SPACE, onLeft)
+END_EVENT_HANDLER()
+
 MyDisplay::MyDisplay()
 {
 	STANDARD_CONSTRUCTOR()
@@ -40,11 +46,25 @@ void MyDisplay::copyData(const MyDisplay& org, const bool)
 
 void MyDisplay ::updateTC(const double dt)
 {
+	
+
 	BaseClass::updateTC(dt);
 }
 
 void MyDisplay::updateData(const double dt)
 {
+	mixr::base::PairStream* textureList = getTextures();
+	mixr::graphics::Polygon* background = dynamic_cast<mixr::graphics::Polygon*>(findByName("background")->object());
+
+	background->setTexture(i);
+
+	i++;
+
+	if (i >= 34)
+	{
+		i = 4;
+	}
+
 	mixr::simulation::Station* station = dynamic_cast<mixr::simulation::Station*>(container());
 	if (station != nullptr)
 	{
@@ -52,12 +72,26 @@ void MyDisplay::updateData(const double dt)
 
 		if (player != nullptr)
 		{
-			
-			/*mixr::graphics::Graphic* airspeedIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("airspeed-indicator"));
-			mixr::graphics::Graphic* headingIndicator = dynamic_cast<mixr::graphics::Graphic*>(findByName("heading-indicator"));*/
+			velocity = player->getTotalVelocity();
+			altitude = player->getAltitude();
+			degrees = player->getHeadingD();
+			//heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
 
-			std::cout << player->getAltitudeAglFt();
+			if (heading != nullptr)
+			{
+				if (degrees >= 0 && degrees < 90) heading->setText("N");
+				else if (degrees >= 90 && degrees < 180) heading->setText("E");
+				else if (degrees >= 180 && degrees < 270) heading->setText("S");
+				else if (degrees >= 270 && degrees < 360) heading->setText("W");
 
+				send("heading", UPDATE_VALUE, heading, headingSD);
+			}
+
+			//std::cout << player-> << std::endl;
+
+			send("degrees", UPDATE_VALUE, degrees, degreesSD);
+			send("altitude", UPDATE_VALUE, altitude, altitudeSD);
+			send("velocity", UPDATE_VALUE, velocity, velocitySD);
 		}
 	}
 	BaseClass::updateData(dt);
@@ -66,4 +100,36 @@ void MyDisplay::updateData(const double dt)
 void MyDisplay::reset()
 {
 	BaseClass::reset();
+}
+
+bool MyDisplay::onLeft()
+{
+	falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
+	
+	if (falconLogo != nullptr)
+	{
+		if (curAngle <= 30)
+		{
+			curAngle++;
+			falconLogo->lcRotate(angle);
+		}
+	}
+
+	return true;
+}
+
+bool MyDisplay::onRight()
+{
+	falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
+
+	if (falconLogo != nullptr)
+	{
+		if (curAngle >= -30)
+		{
+			curAngle--;
+			falconLogo->lcRotate(-angle);
+		}
+	}
+
+	return true;
 }

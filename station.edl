@@ -29,13 +29,44 @@ display:
 
 	clearDepth: 20.0
 
-	clearColor: ( rgb 0.9 0.9 1 )
+	clearColor: ( rgb 0 0 0 )
 
 	normalFont: digital
 
 	textures: {
-        falcon: ( BitmapTexture width: 1024 height: 512 path:  "../../mixr-data/textures/"  file: "newfalcon.bmp" )
-        t2: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "Green_Veined_Marble.bmp" )
+        falcon: ( BitmapTexture width: 1024 height: 512 path:  "../../mixr-data/textures/"  file: "falcon.bmp" )
+        marb: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "Green_Veined_Marble.bmp" )
+		falcon-logo: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "falconlogo.bmp" )
+		t0: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_00.bmp" )
+		t1: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_01.bmp" )
+		t2: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_02.bmp" )
+		t3: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_03.bmp" )
+		t4: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_04.bmp" )
+		t5: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_05.bmp" )
+		t6: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_06.bmp" )
+		t7: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_07.bmp" )
+		t8: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_08.bmp" )
+		t9: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_09.bmp" )
+		t10: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_10.bmp" )
+		t11: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_11.bmp" )
+		t12: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_12.bmp" )
+		t13: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_13.bmp" )
+		t14: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_14.bmp" )
+		t15: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_15.bmp" )
+		t16: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_16.bmp" )
+		t17: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_17.bmp" )
+		t18: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_18.bmp" )
+		t19: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_19.bmp" )
+		t20: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_20.bmp" )
+		t21: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_21.bmp" )
+		t22: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_22.bmp" )
+		t23: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_23.bmp" )
+		t24: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_24.bmp" )
+		t25: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_25.bmp" )
+		t26: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_26.bmp" )
+		t27: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_27.bmp" )
+		t28: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_28.bmp" )
+		t29: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_29.bmp" )
     }
 
 	fonts:
@@ -76,20 +107,20 @@ display:
 
 	components:
 	{
-#line 70 "display.epp"
-#line 1 "heading-indicator.epp"
+#line 101 "display.epp"
+#line 1 "heading_indicator.epp"
 
 heading-indicator:
 ( Graphic
 
-	transform: { ( Translation -4 5 ) ( Scale 0.5 ) }
+	transform: { ( Translation -8.8 -1.1 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
 
 	components:
 	{
 		degrees:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -12 0.5 ) ( Scale 4.5 ) }
+			transform: { ( Translation -9.5 0.5 ) ( Scale 4.5 ) }
 			format: ###
 		)
 
@@ -103,7 +134,7 @@ heading-indicator:
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -7 -1.5 ) ( Scale 0.75 ) }
+			transform: { ( Translation -8.5 -4 ) ( Scale 1.3 ) }
 			text: "DEGREES"
 		)
 
@@ -163,26 +194,26 @@ heading-indicator:
 
 
 )
-#line 71 "display.epp"
-#line 1 "airspeed-indicator.epp"
+#line 102 "display.epp"
+#line 1 "airspeed_indicator.epp"
 
 airspeed-indicator:
 ( Graphic
 
-	transform: { ( Translation -4 -4 ) ( Scale 0.5 ) }
+	transform: { ( Translation -3.65 0.2 ) ( Scale 0.075 ) }
 
 	components:
 	{
 		( AsciiText
 			color: ( rgb 1 0 0 )
 			transform: { ( Translation -6 4 ) ( Scale 3.0 ) }
-			text: "KNOTS"
+			text: "MET/S"
 		)
 
-		knots:
+		velocity:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -15 -5 ) ( Scale 10.0 ) }
+			transform: { ( Translation -11 -3 ) ( Scale 7.0 ) }
 			format: ####
 		)
 
@@ -248,27 +279,27 @@ airspeed-indicator:
 
 	}
 )
-#line 72 "display.epp"
+#line 103 "display.epp"
 #line 1 "altimeter_and_vsi.epp"
 
 altimeter-vsi:
 ( Graphic
 
-	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
+	transform: { ( Translation -8.7 -2.7 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
 
 	components:
 	{
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -2 1.5 ) ( Scale 0.75 ) }
+			transform: { ( Translation -2.2 0.5 ) ( Scale 1.25 ) }
 			text: "FEET"
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -3.2 -6.7 ) ( Scale 0.75 ) }
+			transform: { ( Translation -6.0 -7.5 ) ( Scale 1.25 ) }
 			text: "FEET / SEC"
 		)
 
@@ -276,7 +307,7 @@ altimeter-vsi:
 		altitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -11 3.2 ) ( Scale 5.0 ) }
+			transform: { ( Translation -6.5 3.2 ) ( Scale 4.5 ) }
 			format: ####
 		)
 
@@ -412,15 +443,133 @@ altimeter-vsi:
 		)
 	}
 )
-#line 73 "display.epp"
+#line 104 "display.epp"
+#line 1 "turn_coordinator.epp"
+turn-coordinator:
+( Graphic
+
+	transform: { ( Translation 0 0 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
+
+	components:
+	{
+		falcon-logo:
+		( Polygon
+			texture: falcon-logo
+			color: white
+			vertices:
+			{
+				[-7 -2.5]
+				[-7 2.5]
+				[ 7 2.5]
+				[ 7 -2.5]
+			}
+			texCoord:
+			{
+				[ 0.0 0.0 ]
+                [ 0.0 1.0 ]
+                [ 1.0 1.0 ]
+				[ 1.0 0.0 ]
 
 
 
+            }
+		)
 
+		( Circle
+			color: black
+			radius: 8.0
+			slices: 20
+			filled: true
+
+		)
 
 		( Polygon
 			color: white
+			vertices:
+			{
+				[-8.9 -0.2]
+				[-8.9 0.2]
+				[ 8.9 0.2]
+				[ 8.9 -0.2]
 
+			}
+		)
+
+		( Polygon
+			transform: ( Rotation (Degrees 30))
+			color: white
+			vertices:
+			{
+				[-8.9 -0.2]
+				[-8.9 0.2]
+				[ 0 0 ]
+				[ 0 0 ]
+
+			}
+		)
+
+		( Polygon
+			transform: ( Rotation (Degrees -30))
+			color: white
+			vertices:
+			{
+				[ 0 0 ]
+				[ 0 0 ]
+				[ 8.9 0.2]
+				[ 8.9 -0.2]
+			}
+		)
+
+		( AsciiText
+			transform: ( Translation -7.1 -5.25)
+			color: white
+			font: normal
+			text: "L"
+		)
+
+		( AsciiText
+			transform: ( Translation 6.5 -5.25)
+			color: white
+			font: normal
+			text: "R"
+		)
+
+		( Circle
+
+			radius: 9.0
+			slices: 20
+			color: ( rgb 0.1 0.1 0.1)
+			filled: true
+		)
+
+		( Circle
+			radius: 9.1
+			filled: true
+			slices: 20
+			color: ( rgb 0.1 0.1 0.3 )
+
+		)
+
+		( Circle
+			radius: 10.0
+			slices: 20
+			color: ( rgb 0.05 0.05 0.1 )
+			filled: true
+
+		)
+
+
+	}
+
+
+)
+#line 105 "display.epp"
+
+
+		background:
+		( Polygon
+			color: white
+			texture: t0
 
 			vertices:
 			{
@@ -431,9 +580,9 @@ altimeter-vsi:
 			}
 
 			texCoord: {
+				[ 0.0 0.0 ]
+				[ 0.0 1.0 ]
                 [ 1.0 1.0 ]
-                [ 0.0 1.0 ]
-                [ 0.0 0.0 ]
                 [ 1.0 0.0 ]
             }
 		)
@@ -450,28 +599,37 @@ altimeter-vsi:
 simulation:
 ( MySimulation
 
+	latitude: 37.0
+    longitude: -116.0
+
 	players:
 	{
-#line 9 "simulation.epp"
+#line 12 "simulation.epp"
 #line 1 "player.epp"
-player:
-( MyAircraft
-    id: 11
-    side: blue
-    type: "F-16C"
-    signature: ( SigSphere radius: 2.0 )
-    initXPos: ( NauticalMiles 0.25 )
-    initYPos: ( NauticalMiles 0 )
-    initAlt: ( Feet 5000 )
-    initHeading: ( Degrees 0.0 )
-    initVelocity: 250
-    positionFreeze: 0
-    components: {
-        pilot:
-        ( Autopilot )
-    }
-)
-#line 10 "simulation.epp"
+	player:
+	( MyAircraft
+        id: 11
+        side: blue
+        type: "F-16A"
+        signature: ( SigSphere radius: 2.0 )
+        initXPos: ( NauticalMiles 0.25 )
+        initYPos: ( NauticalMiles 0 )
+        initAlt: ( Feet 10000 )
+        initPitch: 1.57
+        initHeading: ( Degrees 45 )
+        initVelocity: 888
+
+        components: {
+
+          dynamicsModel:
+              ( JSBSimModel
+              rootDir:  "../../mixr-data/JSBSim/"
+              model: "F4N"
+              debugLevel: 0
+              )
+        }
+    )
+#line 13 "simulation.epp"
 	}
 
 

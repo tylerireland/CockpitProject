@@ -2,21 +2,21 @@
 altimeter-vsi:
 ( Graphic
 
-	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
+	transform: { ( Translation -8.7 -2.7 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
 
 	components:
 	{
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -2 1.5 ) ( Scale 0.75 ) }
+			transform: { ( Translation -2.2 0.5 ) ( Scale 1.25 ) }
 			text: "FEET"			
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -3.2 -6.7 ) ( Scale 0.75 ) }
+			transform: { ( Translation -6.0 -7.5 ) ( Scale 1.25 ) }
 			text: "FEET / SEC"			
 		)
 
@@ -24,7 +24,7 @@ altimeter-vsi:
 		altitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -11 3.2 ) ( Scale 5.0 ) }
+			transform: { ( Translation -6.5 3.2 ) ( Scale 4.5 ) }
 			format: ####
 		)
 	

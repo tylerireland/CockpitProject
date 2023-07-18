@@ -1,17 +1,24 @@
-player:
-( MyAircraft
-    id: 11
-    side: blue
-    type: "F-16C"
-    signature: ( SigSphere radius: 2.0 )
-    initXPos: ( NauticalMiles 0.25 )
-    initYPos: ( NauticalMiles 0 )
-    initAlt: ( Feet 5000 )
-    initHeading: ( Degrees 0.0 )      // Initial heading
-    initVelocity: 250
-    positionFreeze: 0
-    components: {
-        pilot:
-        ( Autopilot )
-    }
-)
+	player:
+	( MyAircraft
+        id: 11
+        side: blue
+        type: "F-16A"
+        signature: ( SigSphere radius: 2.0 )
+        initXPos: ( NauticalMiles 0.25 )
+        initYPos: ( NauticalMiles 0 )
+        initAlt: ( Feet 10000 )
+        initPitch: 1.57
+        initHeading: ( Degrees 45 )      // Initial heading
+        initVelocity: 888
+        
+        components: {
+
+          dynamicsModel: 
+              ( JSBSimModel
+              rootDir: MIXR_DATA_JSBSIM_PATH
+              model: "F4N"
+              debugLevel: 0    // set to 1 to print output
+              )
+        }
+    )   
+
