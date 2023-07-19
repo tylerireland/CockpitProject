@@ -6,6 +6,8 @@
 #include "mixr/ui/glut/GlutDisplay.hpp"
 #include "mixr/graphics/readouts/AsciiText.hpp"
 #include "mixr/graphics/Polygon.hpp"
+#include <cmath>
+
 
 class MyDisplay : public mixr::glut::GlutDisplay
 {
@@ -40,10 +42,11 @@ private:
 	// Aircraft's altitude/sec (Feet/Sec)
 	int vsi{};
 	SendData vsiSD{};
-
+	
 	mixr::graphics::Polygon* falconLogo;
-	double angle{ 0.0174533 };
-	double curAngle{0};
+	double angle{ 0.0174532925 }; //0.0174532925 rad == 1 degree
+	double curAngle{-1};
+	double pi = 3.14159265358979323846;
 
 	int i = 4;
 	bool onAlt() { return true; }

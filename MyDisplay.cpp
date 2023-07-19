@@ -87,7 +87,7 @@ void MyDisplay::updateData(const double dt)
 				send("heading", UPDATE_VALUE, heading, headingSD);
 			}
 
-			//std::cout << player-> << std::endl;
+			std::cout << player->getLatitude() << " -- " << player->getLongitude() << std::endl;
 
 			send("degrees", UPDATE_VALUE, degrees, degreesSD);
 			send("altitude", UPDATE_VALUE, altitude, altitudeSD);
@@ -111,7 +111,9 @@ bool MyDisplay::onLeft()
 		if (curAngle <= 30)
 		{
 			curAngle++;
+			std::cout << curAngle << " -- " << falconLogo->getMatrix()(0, 1) * 180 / pi << std::endl;
 			falconLogo->lcRotate(angle);
+			
 		}
 	}
 
@@ -127,6 +129,7 @@ bool MyDisplay::onRight()
 		if (curAngle >= -30)
 		{
 			curAngle--;
+			std::cout << curAngle << " -- " << falconLogo->getMatrix()(0, 1) * 180 / pi << std::endl;
 			falconLogo->lcRotate(-angle);
 		}
 	}

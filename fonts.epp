@@ -1,0 +1,32 @@
+normal:
+( FTGLHaloFont
+	fontPosition: [ -10 10 ]
+	path: MIXR_DATA_FONT_PATH
+	file: "arialn.ttf"
+	// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+	linewidth: 5
+	fontWidth: 1.5
+	fontHeight: 1.0
+)    
+		
+digital:
+( FTGLHaloFont
+	fontPosition: [ -10 10 ]
+	path: MIXR_DATA_FONT_PATH
+	file: "ds-digital.ttf"
+	// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+	linewidth: 5
+	fontWidth: 1.5
+	fontHeight: 1.0
+) 
+
+starwars:
+( FTGLHaloFont
+	fontPosition: [ -10 10 ]
+	path: MIXR_DATA_FONT_PATH
+	file: "star-wars.ttf"
+	// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
+	linewidth: 1
+	fontWidth: 1.7
+	fontHeight: 1.5
+) 

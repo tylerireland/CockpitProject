@@ -60,5 +60,7 @@
     <None Include="heading_indicator.epp" />
     <None Include="altimeter_and_vsi.epp" />
     <None Include="turn_coordinator.epp" />
+    <None Include="textures.epp" />
+    <None Include="fonts.epp" />
   </ItemGroup>
 </Project>
