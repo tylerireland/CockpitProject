@@ -465,30 +465,30 @@ starwars:
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -2.2 0.5 ) ( Scale 1.25 ) }
-			text: "FEET"
+			transform: { ( Translation -5.5 6 ) ( Scale 1.25 ) }
+			text: "feet"
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -6.0 -7.5 ) ( Scale 1.25 ) }
-			text: "FEET / SEC"
+			transform: { ( Translation -6.5 -2 ) ( Scale 1.25 ) }
+			text: "feet/sec"
 		)
 
 
 		altitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -6.5 3.2 ) ( Scale 4.5 ) }
-			format: ####
+			transform: { ( Translation -5 3.2 ) ( Scale 3.0 ) }
+			format: "#####"
 		)
 
 		vsi:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -11 -4.8 ) ( Scale 5.0 ) }
-			format: ####
+			transform: { ( Translation -6.2 -4.8 ) ( Scale 3.0 ) }
+			format: "#####"
 		)
 
 
@@ -557,49 +557,49 @@ starwars:
 
 		( Polygon
 			color: ( rgb 0 0 0 )
-			transform: { ( Translation 0 5 ) }
+			transform: { ( Translation 0 4 ) }
 			vertices:
 			{
-				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0.1 0.1 0.3 )
-			transform: { ( Translation 0 5 ) }
+			transform: { ( Translation 0 4 ) }
 			vertices:
 			{
-				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0 0 0 )
-			transform: { ( Translation 0 -3 ) }
+			transform: { ( Translation 0 -4 ) }
 			vertices:
 			{
-				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0.1 0.1 0.3 )
-			transform: { ( Translation 0 -3 ) }
+			transform: { ( Translation 0 -4 ) }
 			vertices:
 			{
-				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
 			}
 		)
 
@@ -608,10 +608,10 @@ starwars:
 			transform: { ( Translation 0 0 ) }
 			vertices:
 			{
-				[-10 -10]
-				[-10 10]
-				[10 10]
-				[10 -10]
+				[-9 -9]
+				[-9 9]
+				[9 9]
+				[9 -9]
 			}
 		)
 #line 92 "display.epp"
@@ -629,30 +629,30 @@ starwars:
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -2.2 0.5 ) ( Scale 1.25 ) }
-			text: "FEET"
+			transform: { ( Translation -5.5 6 ) ( Scale 1.25 ) }
+			text: "feet"
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
-			transform: { ( Translation -6.0 -7.5 ) ( Scale 1.25 ) }
-			text: "FEET / SEC"
+			transform: { ( Translation -6.5 -2 ) ( Scale 1.25 ) }
+			text: "feet/sec"
 		)
 
 
 		altitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -6.5 3.2 ) ( Scale 4.5 ) }
-			format: ####
+			transform: { ( Translation -5 3.2 ) ( Scale 3.0 ) }
+			format: "#####"
 		)
 
 		vsi:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -11 -4.8 ) ( Scale 5.0 ) }
-			format: ####
+			transform: { ( Translation -6.2 -4.8 ) ( Scale 3.0 ) }
+			format: "#####"
 		)
 
 
@@ -721,49 +721,49 @@ starwars:
 
 		( Polygon
 			color: ( rgb 0 0 0 )
-			transform: { ( Translation 0 5 ) }
+			transform: { ( Translation 0 4 ) }
 			vertices:
 			{
-				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0.1 0.1 0.3 )
-			transform: { ( Translation 0 5 ) }
+			transform: { ( Translation 0 4 ) }
 			vertices:
 			{
-				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0 0 0 )
-			transform: { ( Translation 0 -3 ) }
+			transform: { ( Translation 0 -4 ) }
 			vertices:
 			{
-				[-6 -2.5]
-				[-6 2.5]
-				[6 2.5]
-				[6 -2.5]
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
 			}
 		)
 
 		( Polygon
 			color: ( rgb 0.1 0.1 0.3 )
-			transform: { ( Translation 0 -3 ) }
+			transform: { ( Translation 0 -4 ) }
 			vertices:
 			{
-				[-6.1 -2.6]
-				[-6.1 2.6]
-				[6.1 2.6]
-				[6.1 -2.6]
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
 			}
 		)
 
@@ -772,10 +772,10 @@ starwars:
 			transform: { ( Translation 0 0 ) }
 			vertices:
 			{
-				[-10 -10]
-				[-10 10]
-				[10 10]
-				[10 -10]
+				[-9 -9]
+				[-9 9]
+				[9 9]
+				[9 -9]
 			}
 		)
 #line 102 "display.epp"
@@ -902,6 +902,169 @@ starwars:
 
 
 
+		lat-lon-diplay:
+		( Graphic
+			transform: { ( Translation 0 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
+			components:
+			{
+#line 123 "display.epp"
+#line 1 "lat_lon_display.epp"
+		( AsciiText
+			font: starwars
+			color: ( rgb 1 1 1 )
+			transform: { ( Translation -5.5 6 ) ( Scale 1.25 ) }
+			text: "latitude"
+		)
+
+		( AsciiText
+			font: starwars
+			color: ( rgb 1 1 1 )
+			transform: { ( Translation -6.5 -2 ) ( Scale 1.25 ) }
+			text: "longitude"
+		)
+
+
+		latitude:
+		( NumericReadout
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -6.5 3.2 ) ( Scale 3.0 ) }
+			format: "+###.##"
+		)
+
+		longitude:
+		( NumericReadout
+			color: ( rgb 1 0 0 )
+			transform: { ( Translation -6.2 -4.8 ) ( Scale 3.0 ) }
+			format: "+###.##"
+		)
+
+
+
+
+		( AsciiText
+			font: normal
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation 7.1 7.1 ) ( Scale 1.25 ) }
+			text: "+"
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			radius: 0.75
+			transform: { ( Translation 7.5 7.5 ) }
+
+		)
+
+		( AsciiText
+			font: normal
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation 7.1 -7.90 ) ( Scale 1.25 ) }
+			text: "+"
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			radius: 0.75
+			transform: { ( Translation 7.5 -7.5 ) }
+
+		)
+
+		( AsciiText
+			font: normal
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation -7.9 7.1 ) ( Scale 1.25 ) }
+			text: "+"
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			radius: 0.75
+			transform: { ( Translation -7.5 7.5 ) }
+
+		)
+
+		( AsciiText
+			font: normal
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation -7.9 -7.9 ) ( Scale 1.25 ) }
+			text: "+"
+		)
+
+		( Circle
+			color: ( rgb 0.1 0.1 0.2 )
+			filled: true
+			radius: 0.75
+			transform: { ( Translation -7.5 -7.5 ) }
+
+		)
+
+
+		( Polygon
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation 0 4 ) }
+			vertices:
+			{
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.1 0.1 0.3 )
+			transform: { ( Translation 0 4 ) }
+			vertices:
+			{
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0 0 0 )
+			transform: { ( Translation 0 -4 ) }
+			vertices:
+			{
+				[-7 -1.5]
+				[-7 1.5]
+				[7 1.5]
+				[7 -1.5]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.1 0.1 0.3 )
+			transform: { ( Translation 0 -4 ) }
+			vertices:
+			{
+				[-7.1 -1.6]
+				[-7.1 1.6]
+				[7.1 1.6]
+				[7.1 -1.6]
+			}
+		)
+
+		( Polygon
+			color: ( rgb 0.05 0.05 0.1 )
+			transform: { ( Translation 0 0 ) }
+			vertices:
+			{
+				[-9 -9]
+				[-9 9]
+				[9 9]
+				[9 -9]
+			}
+		)
+#line 124 "display.epp"
+			}
+		)
+
 
 		background:
 		( Polygon
@@ -951,7 +1114,7 @@ simulation:
         signature: ( SigSphere radius: 2.0 )
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
-        initAlt: ( Feet 10000 )
+        initAlt: ( Feet 35000 )
         initPitch: 0
         initRoll: 0
         initHeading: ( Degrees 45 )

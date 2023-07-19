@@ -150,6 +150,7 @@
     <None Include="display.epp" />
     <None Include="fonts.epp" />
     <None Include="heading_indicator.epp" />
+    <None Include="lat_lon_display.epp" />
     <None Include="player.epp" />
     <None Include="simulation.epp" />
     <None Include="station.epp" />

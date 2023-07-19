@@ -38,7 +38,6 @@ display:
 	{
 		// ================================== AIRSPEED INDICATORS =======================================
 		
-			// LEFT SIDE
 		airspeed-indicator: 
 		( Graphic
 			transform: { ( Translation -3.65 0.2 ) ( Scale 0.075 ) }
@@ -48,19 +47,8 @@ display:
 			}
 		)
 
-			// RIGHT SIDE
-		airspeed-indicator: 
-		( Graphic
-			transform: { ( Translation 3.65 0.2 ) ( Scale 0.075 ) }
-			components:
-			{
-				#include "airspeed_indicator.epp"
-			}
-		)
-
 		// ================================== HEADING INDICATORS ========================================
 		
-			// LEFT SIDE
 		heading-indicator:
 		( Graphic
 			transform: { ( Translation -8.8 -1.1 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
@@ -70,32 +58,11 @@ display:
 			}
 		)
 
-			// RIGHT SIDE
-		heading-indicator:
-		( Graphic
-			transform: { ( Translation 8.8 -1.1 ) ( Scale 0.1 ) (Rotation (Degrees -4)) }
-			components:
-			{
-				#include "heading_indicator.epp"
-			}
-		)
-
 		// ================================== ALTIMETER/VSIs ============================================
 		
-			// LEFT SIDE
 		altimeter-vsi:
 		( Graphic
 			transform: { ( Translation -8.7 -2.7 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
-			components:
-			{
-				#include "altimeter_and_vsi.epp"
-			}
-		)
-
-			// RIGHT SIDE
-		altimeter-vsi:
-		( Graphic
-			transform: { ( Translation 8.7 -2.7 ) ( Scale 0.1 ) (Rotation (Degrees -4)) }
 			components:
 			{
 				#include "altimeter_and_vsi.epp"
@@ -113,7 +80,16 @@ display:
 			}
 		)
 
+		// ================================== LAT LAT DISPLAY ===========================================
 
+		lat-lon-diplay:
+		( Graphic
+			transform: { ( Translation 0 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
+			components:
+			{
+				#include "lat_lon_display.epp"
+			}
+		)
 
 		// Background
 		background:

@@ -35,6 +35,7 @@ private:
 	// Aircraft's heading (Degrees)
 	int degrees{};
 	SendData degreesSD{};
+
 	// Aircraft's speed (Knots)
 	int velocity{};
 	SendData velocitySD{};
@@ -43,6 +44,12 @@ private:
 	int vsi{};
 	SendData vsiSD{};
 	
+	// Aircraft's lat/lon
+	double lat{};
+	double lon{};
+	SendData latSD{};
+	SendData lonSD{};
+
 	mixr::graphics::Polygon* falconLogo;
 	double angle{ 0.0174532925 }; //0.0174532925 rad == 1 degree
 	double curAngle{-1};

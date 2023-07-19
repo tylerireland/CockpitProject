@@ -75,6 +75,8 @@ void MyDisplay::updateData(const double dt)
 			velocity = player->getTotalVelocity();
 			altitude = player->getAltitude();
 			degrees = player->getHeadingD();
+			lat = player->getLatitude();
+			lon = player->getLongitude();
 			//heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
 
 			if (heading != nullptr)
@@ -89,6 +91,8 @@ void MyDisplay::updateData(const double dt)
 
 			std::cout << player->getLatitude() << " -- " << player->getLongitude() << std::endl;
 
+			send("latitude", UPDATE_VALUE, lat, latSD);
+			send("longitude", UPDATE_VALUE, lon, lonSD);
 			send("degrees", UPDATE_VALUE, degrees, degreesSD);
 			send("altitude", UPDATE_VALUE, altitude, altitudeSD);
 			send("velocity", UPDATE_VALUE, velocity, velocitySD);

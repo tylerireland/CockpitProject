@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="configs">
+      <UniqueIdentifier>{c017c4c4-b23c-4da0-a13d-5c512a0e68ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyDisplay.hpp">
@@ -52,15 +55,38 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="station.epp" />
-    <None Include="display.epp" />
-    <None Include="simulation.epp" />
-    <None Include="player.epp" />
-    <None Include="airspeed_indicator.epp" />
-    <None Include="heading_indicator.epp" />
-    <None Include="altimeter_and_vsi.epp" />
-    <None Include="turn_coordinator.epp" />
-    <None Include="textures.epp" />
-    <None Include="fonts.epp" />
+    <None Include="airspeed_indicator.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="altimeter_and_vsi.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="display.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="fonts.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="heading_indicator.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="lat_lon_display.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="player.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="simulation.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="station.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="textures.epp">
+      <Filter>configs</Filter>
+    </None>
+    <None Include="turn_coordinator.epp">
+      <Filter>configs</Filter>
+    </None>
   </ItemGroup>
 </Project>

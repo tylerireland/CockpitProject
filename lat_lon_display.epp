@@ -2,29 +2,29 @@
 			font: starwars
 			color: ( rgb 1 1 1 )
 			transform: { ( Translation -5.5 6 ) ( Scale 1.25 ) }
-			text: "feet"			
+			text: "latitude"			
 		)
 
 		( AsciiText
 			font: starwars
 			color: ( rgb 1 1 1 )
 			transform: { ( Translation -6.5 -2 ) ( Scale 1.25 ) }
-			text: "feet/sec"			
+			text: "longitude"			
 		)
 
 
-		altitude:
+		latitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -5 3.2 ) ( Scale 3.0 ) }
-			format: "#####"
+			transform: { ( Translation -6.5 3.2 ) ( Scale 3.0 ) }
+			format: "+###.##"
 		)
 	
-		vsi:
+		longitude:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
 			transform: { ( Translation -6.2 -4.8 ) ( Scale 3.0 ) }
-			format: "#####"
+			format: "+###.##"
 		)
 		
 		// ============ SCREWS =====================
