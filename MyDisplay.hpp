@@ -6,7 +6,9 @@
 #include "mixr/ui/glut/GlutDisplay.hpp"
 #include "mixr/graphics/readouts/AsciiText.hpp"
 #include "mixr/graphics/Polygon.hpp"
+#include "MyAircraft.hpp"
 #include <cmath>
+#include <ctime>
 
 
 class MyDisplay : public mixr::glut::GlutDisplay
@@ -24,8 +26,13 @@ public:
 
 private:
 
+	MyAircraft* player;
+
+	time_t prevTime = time(NULL);
+	time_t curTime = time(NULL);
+
 	// Aircraft's altitude (Feet)
-	int altitude{};
+	double altitude{};
 	SendData altitudeSD{};
 
 	// Aircraft's heading (NSEW)
@@ -33,27 +40,33 @@ private:
 	SendData headingSD{};
 
 	// Aircraft's heading (Degrees)
-	int degrees{};
+	double degrees{};
 	SendData degreesSD{};
 
 	// Aircraft's speed (Knots)
-	int velocity{};
+	double velocity{};
 	SendData velocitySD{};
 
 	// Aircraft's altitude/sec (Feet/Sec)
-	int vsi{};
+	double prevAlt{};
+	double vsi{};
 	SendData vsiSD{};
 	
+	// Aircraft's Roll (Degrees)
+	double roll{};
+	SendData rollSD{};
+
 	// Aircraft's lat/lon
 	double lat{};
 	double lon{};
 	SendData latSD{};
 	SendData lonSD{};
 
-	mixr::graphics::Polygon* falconLogo;
+	
 	double angle{ 0.0174532925 }; //0.0174532925 rad == 1 degree
 	double curAngle{-1};
 	double pi = 3.14159265358979323846;
+	double curRoll{0};
 
 	int i = 4;
 	bool onAlt() { return true; }

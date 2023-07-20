@@ -14,7 +14,7 @@
         
         components: {
 
-          dynamicsModel: 
+          dynamics-model: 
               ( JSBSimModel
               rootDir: MIXR_DATA_JSBSIM_PATH
               model: "F4N"

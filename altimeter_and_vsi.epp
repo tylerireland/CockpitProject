@@ -24,7 +24,7 @@
 		( NumericReadout
 			color: ( rgb 1 0 0 )
 			transform: { ( Translation -6.2 -4.8 ) ( Scale 3.0 ) }
-			format: "#####"
+			format: "+####"
 		)
 		
 		// ============ SCREWS =====================

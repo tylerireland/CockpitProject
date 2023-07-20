@@ -40,7 +40,7 @@ display:
 		
 		airspeed-indicator: 
 		( Graphic
-			transform: { ( Translation -3.65 0.2 ) ( Scale 0.075 ) }
+			transform: { ( Translation -0 1 ) ( Scale 0.1 ) }
 			components:
 			{
 				#include "airspeed_indicator.epp"
@@ -51,7 +51,7 @@ display:
 		
 		heading-indicator:
 		( Graphic
-			transform: { ( Translation -8.8 -1.1 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
+			transform: { ( Translation -3 1 ) ( Scale 0.12 ) (Rotation (Degrees 0)) }
 			components:
 			{
 				#include "heading_indicator.epp"
@@ -62,7 +62,7 @@ display:
 		
 		altimeter-vsi:
 		( Graphic
-			transform: { ( Translation -8.7 -2.7 ) ( Scale 0.1 ) (Rotation (Degrees 4)) }
+			transform: { ( Translation 2.5 -2 ) ( Scale 0.15 ) (Rotation (Degrees 0)) }
 			components:
 			{
 				#include "altimeter_and_vsi.epp"
@@ -73,7 +73,7 @@ display:
 		
 		turn-coordinator:
 		( Graphic
-			transform: { ( Translation 0 0 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
+			transform: { ( Translation 3 1 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
 				#include "turn_coordinator.epp"
@@ -84,7 +84,7 @@ display:
 
 		lat-lon-diplay:
 		( Graphic
-			transform: { ( Translation 0 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
+			transform: { ( Translation -2.5 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
 				#include "lat_lon_display.epp"

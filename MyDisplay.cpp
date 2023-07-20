@@ -4,6 +4,7 @@
 #include "xpanel/Pfd.hpp"
 
 #include "mixr/models/player/air/AirVehicle.hpp"
+#include "mixr/models/dynamics/JSBSimModel.hpp"
 #include "mixr/models/player/weapon/Missile.hpp"
 
 #include "mixr/models/system/Jammer.hpp"
@@ -20,7 +21,6 @@
 #include "mixr/base/Pair.hpp"
 #include "mixr/base/PairStream.hpp"
 #include "mixr/graphics/SymbolLoader.hpp"
-#include "MyAircraft.hpp"
 #include <GL/glut.h>
 
 IMPLEMENT_SUBCLASS(MyDisplay, "MyDisplay")
@@ -47,12 +47,13 @@ void MyDisplay::copyData(const MyDisplay& org, const bool)
 void MyDisplay ::updateTC(const double dt)
 {
 	
-
+	
 	BaseClass::updateTC(dt);
 }
 
 void MyDisplay::updateData(const double dt)
 {
+	curTime = time(NULL);
 	mixr::base::PairStream* textureList = getTextures();
 	mixr::graphics::Polygon* background = dynamic_cast<mixr::graphics::Polygon*>(findByName("background")->object());
 
@@ -68,7 +69,8 @@ void MyDisplay::updateData(const double dt)
 	mixr::simulation::Station* station = dynamic_cast<mixr::simulation::Station*>(container());
 	if (station != nullptr)
 	{
-		MyAircraft* player = dynamic_cast<MyAircraft*>(station->getOwnship());
+		player = dynamic_cast<MyAircraft*>(station->getOwnship());
+		mixr::graphics::Polygon* falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
 
 		if (player != nullptr)
 		{
@@ -77,6 +79,17 @@ void MyDisplay::updateData(const double dt)
 			degrees = player->getHeadingD();
 			lat = player->getLatitude();
 			lon = player->getLongitude();
+			roll = player->getRollD();
+			
+			if (curTime - prevTime == 1)
+			{
+				prevTime = time(NULL);
+				vsi = altitude - prevAlt;
+				prevAlt = player->getAltitude();
+			}
+			
+
+			std::cout << curTime << std::endl;
 			//heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
 
 			if (heading != nullptr)
@@ -89,13 +102,20 @@ void MyDisplay::updateData(const double dt)
 				send("heading", UPDATE_VALUE, heading, headingSD);
 			}
 
-			std::cout << player->getLatitude() << " -- " << player->getLongitude() << std::endl;
+			/*std::cout << curRoll << std::endl;
+			std::cout << roll << std::endl << std::endl;*/
 
 			send("latitude", UPDATE_VALUE, lat, latSD);
 			send("longitude", UPDATE_VALUE, lon, lonSD);
 			send("degrees", UPDATE_VALUE, degrees, degreesSD);
 			send("altitude", UPDATE_VALUE, altitude, altitudeSD);
 			send("velocity", UPDATE_VALUE, velocity, velocitySD);
+			send("vsi", UPDATE_VALUE, vsi, vsiSD);
+
+			falconLogo->lcRotate(-curRoll + roll);
+
+			curRoll = player->getRollD();
+			
 		}
 	}
 	BaseClass::updateData(dt);
@@ -108,17 +128,13 @@ void MyDisplay::reset()
 
 bool MyDisplay::onLeft()
 {
-	falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
-	
-	if (falconLogo != nullptr)
+	if (player != nullptr)
 	{
-		if (curAngle <= 30)
-		{
-			curAngle++;
-			std::cout << curAngle << " -- " << falconLogo->getMatrix()(0, 1) * 180 / pi << std::endl;
-			falconLogo->lcRotate(angle);
-			
-		}
+		const auto dynaModel = dynamic_cast<mixr::models::JSBSimModel*>(player->findByName("dynamics-model")->object());
+
+		if(dynaModel != nullptr) dynaModel->setCommandedHeadingD(30);
+
+		std::cout << dynaModel->getCommandedHeadingD();
 	}
 
 	return true;
@@ -126,17 +142,17 @@ bool MyDisplay::onLeft()
 
 bool MyDisplay::onRight()
 {
-	falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
+	
 
-	if (falconLogo != nullptr)
+	/*if (falconLogo != nullptr)
 	{
 		if (curAngle >= -30)
 		{
 			curAngle--;
-			std::cout << curAngle << " -- " << falconLogo->getMatrix()(0, 1) * 180 / pi << std::endl;
-			falconLogo->lcRotate(-angle);
+			double curRoll = falconLogo->getMatrix()(0, 1) * 180 / pi;
+			falconLogo->lcRotate(-curRoll + roll);
 		}
-	}
+	}*/
 
 	return true;
 }
