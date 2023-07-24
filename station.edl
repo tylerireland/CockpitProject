@@ -116,12 +116,13 @@ starwars:
 	{
 
 
+
 		airspeed-indicator:
 		( Graphic
 			transform: { ( Translation -0 1 ) ( Scale 0.1 ) }
 			components:
 			{
-#line 46 "display.epp"
+#line 47 "display.epp"
 #line 1 "airspeed_indicator.epp"
 		( AsciiText
 			color: ( rgb 1 0 0 )
@@ -195,7 +196,7 @@ starwars:
 			filled: true
 			transform: ( Translation 0 0 )
 		)
-#line 47 "display.epp"
+#line 48 "display.epp"
 			}
 		)
 
@@ -206,7 +207,7 @@ starwars:
 			transform: { ( Translation -3 1 ) ( Scale 0.12 ) (Rotation (Degrees 0)) }
 			components:
 			{
-#line 57 "display.epp"
+#line 58 "display.epp"
 #line 1 "heading_indicator.epp"
 		degrees:
 		( NumericReadout
@@ -279,7 +280,7 @@ starwars:
 				[10 -5]
 			}
 		)
-#line 58 "display.epp"
+#line 59 "display.epp"
 			}
 		)
 
@@ -290,7 +291,7 @@ starwars:
 			transform: { ( Translation 2.5 -2 ) ( Scale 0.15 ) (Rotation (Degrees 0)) }
 			components:
 			{
-#line 68 "display.epp"
+#line 69 "display.epp"
 #line 1 "altimeter_and_vsi.epp"
 		( AsciiText
 			font: starwars
@@ -444,7 +445,7 @@ starwars:
 				[9 -9]
 			}
 		)
-#line 69 "display.epp"
+#line 70 "display.epp"
 			}
 		)
 
@@ -455,7 +456,7 @@ starwars:
 			transform: { ( Translation 3 1 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
-#line 79 "display.epp"
+#line 80 "display.epp"
 #line 1 "turn_coordinator.epp"
 		falcon-logo:
 		( Polygon
@@ -562,7 +563,7 @@ starwars:
 			filled: true
 
 		)
-#line 80 "display.epp"
+#line 81 "display.epp"
 			}
 		)
 
@@ -573,7 +574,7 @@ starwars:
 			transform: { ( Translation -2.5 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
-#line 90 "display.epp"
+#line 91 "display.epp"
 #line 1 "lat_lon_display.epp"
 		( AsciiText
 			font: starwars
@@ -727,9 +728,10 @@ starwars:
 				[9 -9]
 			}
 		)
-#line 91 "display.epp"
+#line 92 "display.epp"
 			}
 		)
+
 
 
 		background:
@@ -781,10 +783,10 @@ simulation:
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
         initAlt: ( Feet 35000 )
-        initPitch: 0
+        initPitch: ( Degrees 50 )
         initRoll: 0
-        initHeading: ( Degrees 45 )
-        initVelocity: 1000
+        initHeading: ( Degrees 276 )
+        initVelocity: 350
 
         components: {
 

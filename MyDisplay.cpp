@@ -89,8 +89,8 @@ void MyDisplay::updateData(const double dt)
 			}
 			
 
-			std::cout << curTime << std::endl;
-			//heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
+			std::cout << player->getPitchD() << std::endl;
+			heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
 
 			if (heading != nullptr)
 			{
@@ -105,12 +105,12 @@ void MyDisplay::updateData(const double dt)
 			/*std::cout << curRoll << std::endl;
 			std::cout << roll << std::endl << std::endl;*/
 
-			send("latitude", UPDATE_VALUE, lat, latSD);
+			send("latitude",  UPDATE_VALUE, lat, latSD);
 			send("longitude", UPDATE_VALUE, lon, lonSD);
-			send("degrees", UPDATE_VALUE, degrees, degreesSD);
-			send("altitude", UPDATE_VALUE, altitude, altitudeSD);
-			send("velocity", UPDATE_VALUE, velocity, velocitySD);
-			send("vsi", UPDATE_VALUE, vsi, vsiSD);
+			send("degrees",   UPDATE_VALUE, degrees, degreesSD);
+			send("altitude",  UPDATE_VALUE, altitude, altitudeSD);
+			send("velocity",  UPDATE_VALUE, velocity, velocitySD);
+			send("vsi",       UPDATE_VALUE, vsi, vsiSD);
 
 			falconLogo->lcRotate(-curRoll + roll);
 
@@ -130,11 +130,9 @@ bool MyDisplay::onLeft()
 {
 	if (player != nullptr)
 	{
-		const auto dynaModel = dynamic_cast<mixr::models::JSBSimModel*>(player->findByName("dynamics-model")->object());
+		std::cout << player->getHeadingD();
 
-		if(dynaModel != nullptr) dynaModel->setCommandedHeadingD(30);
-
-		std::cout << dynaModel->getCommandedHeadingD();
+		player->setEulerAngles(20, 20, 20);
 	}
 
 	return true;

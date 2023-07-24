@@ -7,10 +7,10 @@
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
         initAlt: ( Feet 35000 )
-        initPitch: 0
+        initPitch: ( Degrees 50 )
         initRoll: 0
-        initHeading: ( Degrees 45 )      // Initial heading
-        initVelocity: 1000
+        initHeading: ( Degrees 276 )      // Initial heading
+        initVelocity: 350
         
         components: {
 

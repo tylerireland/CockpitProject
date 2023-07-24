@@ -36,6 +36,7 @@ display:
 
 	components:
 	{
+		
 		// ================================== AIRSPEED INDICATORS =======================================
 		
 		airspeed-indicator: 
@@ -91,7 +92,8 @@ display:
 			}
 		)
 
-		// Background
+		// ================================== BACKGROUND ================================================
+	
 		background:
 		( Polygon
 			color: white
