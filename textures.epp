@@ -1,4 +1,5 @@
 falcon: ( BitmapTexture width: 1024 height: 512 path: MIXR_DATA_TEXTURES_PATH  file: "falcon.bmp" )
+attitude: ( BitmapTexture width: 512 height: 1024 path: MIXR_DATA_TEXTURES_PATH  file: "attitude-sky.bmp" )
 marb: ( BitmapTexture width: 128 height: 128 path: MIXR_DATA_TEXTURES_PATH  file: "Green_Veined_Marble.bmp" )
 falcon-logo: ( BitmapTexture width: 128 height: 128 path: MIXR_DATA_TEXTURES_PATH  file: "falconlogo.bmp" ) 
 t0: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_00.bmp" )

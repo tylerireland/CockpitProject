@@ -20,7 +20,7 @@ display:
 
 	clearDepth:  20.0
 					
-	clearColor:	 ( rgb 0 0 0 ) // Dark Blue
+	clearColor:	 ( rgb 1 1 1 ) // Dark Blue
 
 	normalFont: digital
 
@@ -35,13 +35,23 @@ display:
 	}
 
 	components:
-	{
+	{		
 		
+		attitude-indicator: 
+		( Graphic
+			transform: { ( Translation -7.3 -0.60 ) ( Scale 0.195 ) }
+			components:
+			{
+				#include "attitude_indicator.epp"
+			}
+		)
+	
+
 		// ================================== AIRSPEED INDICATORS =======================================
 		
 		airspeed-indicator: 
 		( Graphic
-			transform: { ( Translation -0 1 ) ( Scale 0.1 ) }
+			transform: { ( Translation 0 1 ) ( Scale 0.1 ) }
 			components:
 			{
 				#include "airspeed_indicator.epp"
@@ -81,7 +91,7 @@ display:
 			}
 		)
 
-		// ================================== LAT LAT DISPLAY ===========================================
+		// ================================== LAT LON DISPLAY ===========================================
 
 		lat-lon-diplay:
 		( Graphic
@@ -94,6 +104,8 @@ display:
 
 		// ================================== BACKGROUND ================================================
 	
+
+
 		background:
 		( Polygon
 			color: white
@@ -114,7 +126,6 @@ display:
                 [  1.0  0.0 ]
             }
 		)
+
 	}
-
-
 )

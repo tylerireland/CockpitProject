@@ -147,6 +147,7 @@
   <ItemGroup>
     <None Include="airspeed_indicator.epp" />
     <None Include="altimeter_and_vsi.epp" />
+    <None Include="attitude_indicator.epp" />
     <None Include="display.epp" />
     <None Include="fonts.epp" />
     <None Include="heading_indicator.epp" />

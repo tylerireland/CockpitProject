@@ -88,5 +88,8 @@
     <None Include="turn_coordinator.epp">
       <Filter>configs</Filter>
     </None>
+    <None Include="attitude_indicator.epp">
+      <Filter>configs</Filter>
+    </None>
   </ItemGroup>
 </Project>

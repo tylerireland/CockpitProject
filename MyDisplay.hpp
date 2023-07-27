@@ -52,6 +52,10 @@ private:
 	double vsi{};
 	SendData vsiSD{};
 	
+	// Aircraft's Pitch (Degrees)
+	double pitch{};
+	SendData pitchSD{};
+
 	// Aircraft's Roll (Degrees)
 	double roll{};
 	SendData rollSD{};
@@ -68,11 +72,16 @@ private:
 	double pi = 3.14159265358979323846;
 	double curRoll{0};
 
-	int i = 4;
+	double yPos{};
+
+	int i = 5;
 	bool onAlt() { return true; }
 
 	bool onLeft();
 	bool onRight();
+
+
+	double var;
 
 };
 

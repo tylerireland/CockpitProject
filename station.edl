@@ -29,7 +29,7 @@ display:
 
 	clearDepth: 20.0
 
-	clearColor: ( rgb 0 0 0 )
+	clearColor: ( rgb 1 1 1 )
 
 	normalFont: digital
 
@@ -38,6 +38,7 @@ display:
 #line 29 "display.epp"
 #line 1 "textures.epp"
 falcon: ( BitmapTexture width: 1024 height: 512 path:  "../../mixr-data/textures/"  file: "falcon.bmp" )
+attitude: ( BitmapTexture width: 512 height: 1024 path:  "../../mixr-data/textures/"  file: "attitude-sky.bmp" )
 marb: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "Green_Veined_Marble.bmp" )
 falcon-logo: ( BitmapTexture width: 128 height: 128 path:  "../../mixr-data/textures/"  file: "falconlogo.bmp" )
 t0: ( BitmapTexture width: 2048 height: 1024 path: "C:\Apps\mixr\mixr-data\textures\SpaceFrames" file: "frame_00.bmp" )
@@ -115,14 +116,149 @@ starwars:
 	components:
 	{
 
+		attitude-indicator:
+		( Graphic
+			transform: { ( Translation -7.3 -0.60 ) ( Scale 0.195 ) }
+			components:
+			{
+#line 45 "display.epp"
+#line 1 "attitude_indicator.epp"
+
+
+
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6.2 -6.2]
+		[-6.2 6.2]
+		[-5 6.2]
+		[-5 -6.2]
+	}
+)
+
+
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6.2 -6.2]
+		[-6.2 -5]
+		[6.15 -5]
+		[6.15 -6.2]
+	}
+)
+
+
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[6 -6]
+		[6 6]
+		[5 6]
+		[5 -6]
+	}
+)
+
+
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6 5]
+		[-6 6.5]
+		[6.15 6.5]
+		[6 5]
+	}
+)
+
+
+
+
+
+( Polygon
+	color: ( rgb 1 1 1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-4 -0.25]
+		[-4 0]
+		[-1 0]
+		[-1 -0.25]
+	}
+)
+
+( Polygon
+	color: ( rgb 1 1 1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[4 -0.2]
+		[4 0]
+		[1 0]
+		[1 -0.2]
+	}
+)
+
+
+
+
+
+( Graphic
+
+	scissorX: -5
+	scissorWidth: 10.1
+	scissorY: -5
+	scissorHeight: 10.1
+
+	components:
+	{
+		pitch:
+		( Polygon
+
+			transform: { ( Translation 0 0 ) }
+			color: ( rgb 1 1 1 )
+			texture: attitude
+			vertices:
+			{
+				[-8 -20]
+				[-8 20]
+				[8 20]
+				[8 -20]
+			}
+
+			texCoord:
+			{
+				[ 0.0 0.0 ]
+				[ 0.0 1.0 ]
+				[ 1.0 1.0 ]
+				[ 1.0 0.0 ]
+			}
+
+		)
+
+
+	}
+
+)
+#line 46 "display.epp"
+			}
+		)
+
+
 
 
 		airspeed-indicator:
 		( Graphic
-			transform: { ( Translation -0 1 ) ( Scale 0.1 ) }
+			transform: { ( Translation 0 1 ) ( Scale 0.1 ) }
 			components:
 			{
-#line 47 "display.epp"
+#line 57 "display.epp"
 #line 1 "airspeed_indicator.epp"
 		( AsciiText
 			color: ( rgb 1 0 0 )
@@ -196,7 +332,7 @@ starwars:
 			filled: true
 			transform: ( Translation 0 0 )
 		)
-#line 48 "display.epp"
+#line 58 "display.epp"
 			}
 		)
 
@@ -207,7 +343,7 @@ starwars:
 			transform: { ( Translation -3 1 ) ( Scale 0.12 ) (Rotation (Degrees 0)) }
 			components:
 			{
-#line 58 "display.epp"
+#line 68 "display.epp"
 #line 1 "heading_indicator.epp"
 		degrees:
 		( NumericReadout
@@ -280,7 +416,7 @@ starwars:
 				[10 -5]
 			}
 		)
-#line 59 "display.epp"
+#line 69 "display.epp"
 			}
 		)
 
@@ -291,7 +427,7 @@ starwars:
 			transform: { ( Translation 2.5 -2 ) ( Scale 0.15 ) (Rotation (Degrees 0)) }
 			components:
 			{
-#line 69 "display.epp"
+#line 79 "display.epp"
 #line 1 "altimeter_and_vsi.epp"
 		( AsciiText
 			font: starwars
@@ -445,7 +581,7 @@ starwars:
 				[9 -9]
 			}
 		)
-#line 70 "display.epp"
+#line 80 "display.epp"
 			}
 		)
 
@@ -456,7 +592,7 @@ starwars:
 			transform: { ( Translation 3 1 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
-#line 80 "display.epp"
+#line 90 "display.epp"
 #line 1 "turn_coordinator.epp"
 		falcon-logo:
 		( Polygon
@@ -563,7 +699,7 @@ starwars:
 			filled: true
 
 		)
-#line 81 "display.epp"
+#line 91 "display.epp"
 			}
 		)
 
@@ -574,7 +710,7 @@ starwars:
 			transform: { ( Translation -2.5 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
 			components:
 			{
-#line 91 "display.epp"
+#line 101 "display.epp"
 #line 1 "lat_lon_display.epp"
 		( AsciiText
 			font: starwars
@@ -728,9 +864,11 @@ starwars:
 				[9 -9]
 			}
 		)
-#line 92 "display.epp"
+#line 102 "display.epp"
 			}
 		)
+
+
 
 
 
@@ -754,9 +892,8 @@ starwars:
                 [ 1.0 0.0 ]
             }
 		)
+
 	}
-
-
 )
 #line 9 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
 #line 11 "C:/Apps/mixr/mixr-examples/CockpitProject/station.epp"
@@ -782,11 +919,11 @@ simulation:
         signature: ( SigSphere radius: 2.0 )
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
-        initAlt: ( Feet 35000 )
-        initPitch: ( Degrees 50 )
-        initRoll: 0
-        initHeading: ( Degrees 276 )
-        initVelocity: 350
+        initAlt: ( Feet 1 )
+        initPitch: ( Degrees 45 )
+        initRoll: ( Degrees 0 )
+        initHeading: ( Degrees 0 )
+        initVelocity: 50
 
         components: {
 
@@ -794,7 +931,7 @@ simulation:
               ( JSBSimModel
               rootDir:  "../../mixr-data/JSBSim/"
               model: "F4N"
-              debugLevel: 0
+              debugLevel: 1
               )
         }
     )

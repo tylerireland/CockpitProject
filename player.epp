@@ -6,11 +6,11 @@
         signature: ( SigSphere radius: 2.0 )
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
-        initAlt: ( Feet 35000 )
-        initPitch: ( Degrees 50 )
-        initRoll: 0
-        initHeading: ( Degrees 276 )      // Initial heading
-        initVelocity: 350
+        initAlt: ( Feet 1 )
+        initPitch: ( Degrees 45 )
+        initRoll: ( Degrees 0 )
+        initHeading: ( Degrees 0 )      // Initial heading
+        initVelocity: 50
         
         components: {
 
@@ -18,7 +18,7 @@
               ( JSBSimModel
               rootDir: MIXR_DATA_JSBSIM_PATH
               model: "F4N"
-              debugLevel: 0    // set to 1 to print output
+              debugLevel: 1    // set to 1 to print output
               )
         }
     )   
