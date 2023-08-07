@@ -6,11 +6,11 @@
         signature: ( SigSphere radius: 2.0 )
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
-        initAlt: ( Feet 1 )
+        initAlt: ( Feet 60 )
         initPitch: ( Degrees 45 )
         initRoll: ( Degrees 0 )
-        initHeading: ( Degrees 0 )      // Initial heading
-        initVelocity: 50
+        initHeading: ( Degrees 30 )      // Initial heading
+        initVelocity: 500
         
         components: {
 
@@ -20,6 +20,10 @@
               model: "F4N"
               debugLevel: 1    // set to 1 to print output
               )
+
+        ( Autopilot 
+            holdVelocityKts: 500
+        )
         }
     )   
 

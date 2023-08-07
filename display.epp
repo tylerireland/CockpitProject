@@ -36,7 +36,19 @@ display:
 
 	components:
 	{		
-		
+	
+	( Rotators
+			//texture: falcon-logo
+			color: black
+			vertices: 
+			{
+				[-7 -2.5]
+				[-7  2.5]
+				[ 7  2.5]
+				[ 7 -2.5]
+			}
+	)
+	/*
 		attitude-indicator: 
 		( Graphic
 			transform: { ( Translation -7.3 -0.60 ) ( Scale 0.195 ) }
@@ -104,8 +116,6 @@ display:
 
 		// ================================== BACKGROUND ================================================
 	
-
-
 		background:
 		( Polygon
 			color: white
@@ -126,6 +136,6 @@ display:
                 [  1.0  0.0 ]
             }
 		)
-
+		*/
 	}
 )

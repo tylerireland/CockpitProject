@@ -8,8 +8,9 @@
 #include "mixr/graphics/Polygon.hpp"
 #include "MyAircraft.hpp"
 #include <cmath>
+#include <string>
 #include <ctime>
-
+#include <time.h>
 
 class MyDisplay : public mixr::glut::GlutDisplay
 {
@@ -30,6 +31,18 @@ private:
 
 	time_t prevTime = time(NULL);
 	time_t curTime = time(NULL);
+
+	//struct tm newtime;
+	//time_t now = time(0);
+	//localtime_s(&newtime, &now);
+
+	//int year = 1900 + ltm->tm_year;
+	//int month = 1 + ltm->tm_mon;
+	//int day = ltm->tm_mday;
+	//int hour = 5 + ltm->tm_hour;
+	//int min = 30 + ltm->tm_min;
+
+
 
 	// Aircraft's altitude (Feet)
 	double altitude{};
@@ -79,7 +92,8 @@ private:
 
 	bool onLeft();
 	bool onRight();
-
+	bool onUp();
+	bool onDown();
 
 	double var;
 

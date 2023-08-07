@@ -1,5 +1,5 @@
 		falcon-logo:
-		( Polygon
+		( Rotators
 			texture: falcon-logo
 			color: white
 			vertices: 

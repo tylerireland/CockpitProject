@@ -91,5 +91,8 @@
     <None Include="attitude_indicator.epp">
       <Filter>configs</Filter>
     </None>
+    <None Include="clock.epp">
+      <Filter>configs</Filter>
+    </None>
   </ItemGroup>
 </Project>
