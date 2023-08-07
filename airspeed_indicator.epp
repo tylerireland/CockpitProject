@@ -1,21 +1,13 @@
-
-
-( Graphic
-
-	transform: { ( Translation 4 -3 ) ( Scale 0.5 ) }
-
-	components:
-	{
 		( AsciiText
 			color: ( rgb 1 0 0 )
 			transform: { ( Translation -6 4 ) ( Scale 3.0 ) }
-			text: "KNOTS"
+			text: "MET/S"
 		)
 
-		knots:
+		velocity:
 		( NumericReadout
 			color: ( rgb 1 0 0 )
-			transform: { ( Translation -15 -5 ) ( Scale 10.0 ) }
+			transform: { ( Translation -11 -3 ) ( Scale 7.0 ) }
 			format: ####
 		)
 
@@ -78,9 +70,6 @@
 			filled: true
 			transform: ( Translation 0 0 )
 		)
-
-	}
-)	
 	
 	
 	

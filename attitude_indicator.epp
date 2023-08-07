@@ -1,0 +1,125 @@
+// =========== OUTLINE ==============================
+
+// left
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6.2  -6.2]
+		[-6.2   6.2]
+		[-5    6.2]
+		[-5   -6.2]
+	}
+)
+
+// bottom
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6.2  -6.2]
+		[-6.2  -5]
+		[6.15   -5]
+		[6.15   -6.2]
+	}
+)
+
+
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[6  -6]
+		[6   6]
+		[5   6]
+		[5  -6]
+	}
+)
+
+// top
+( Polygon
+	color: ( rgb 0.05 0.05 0.1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-6  5]
+		[-6  6.5]
+		[6.15  6.5]
+		[6   5]
+	}
+)
+
+// ===================================================
+
+// =================== CENTER PIECE ==================
+
+( Polygon
+	color: ( rgb 1 1 1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[-4  -0.25]
+		[-4  0]
+		[-1  0]
+		[-1  -0.25]
+	}
+)
+
+( Polygon
+	color: ( rgb 1 1 1 )
+	transform: { ( Translation 0 0 ) }
+	vertices:
+	{
+		[4  -0.2]
+		[4  0]
+		[1  0]
+		[1  -0.2]
+	}
+)
+
+
+
+// =================== DISPLAY =======================
+
+( Graphic
+	
+	scissorX: -5
+	scissorWidth: 10.1
+	scissorY: -5
+	scissorHeight: 10.1
+
+	components:
+	{
+		pitch:
+		( Polygon
+		
+			transform: { ( Translation 0 0 ) }
+			color: ( rgb 1 1 1 )
+			texture: attitude
+			vertices:
+			{
+				[-8 -20]
+				[-8  20]
+				[8   20]
+				[8  -20]
+			}
+
+			texCoord: 
+			{
+				[  0.0  0.0 ]
+				[  0.0  1.0 ]
+				[  1.0  1.0 ]
+				[  1.0  0.0 ]
+			}
+		
+		)
+		
+	
+	}
+	
+)
+
+

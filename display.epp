@@ -20,54 +20,122 @@ display:
 
 	clearDepth:  20.0
 					
-	clearColor:	 ( rgb 0.9 0.9 1 ) // Dark Blue
+	clearColor:	 ( rgb 1 1 1 ) // Dark Blue
 
 	normalFont: digital
 
+	textures: 
+	{
+       #include "textures.epp"
+    }
+
 	fonts: 
 	{
-		normal:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path: MIXR_DATA_FONT_PATH
-			file: "arialn.ttf"
-			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
-			linewidth: 5
-			fontWidth: 1.5
-			fontHeight: 1.0
-		)    
-		
-		digital:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path: MIXR_DATA_FONT_PATH
-			file: "ds-digital.ttf"
-			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
-			linewidth: 5
-			fontWidth: 1.5
-			fontHeight: 1.0
-		) 
-
-		starwars:
-		( FTGLHaloFont
-			fontPosition: [ -10 10 ]
-			path: MIXR_DATA_FONT_PATH
-			file: "star-wars.ttf"
-			// facesize is default to 1 inch, so you can maninpulate the norm with font width and height
-			linewidth: 1
-			fontWidth: 1.7
-			fontHeight: 1.5
-		) 
-	 }
-
-	components:
-	{
-		//#include "heading-indicator.epp"
-		//#include "airspeed-indicator.epp"
-		#include "altimeter_and_vsi.epp"
-	
-	
+		#include "fonts.epp"
 	}
 
+	components:
+	{		
+	
+	( Rotators
+			//texture: falcon-logo
+			color: black
+			vertices: 
+			{
+				[-7 -2.5]
+				[-7  2.5]
+				[ 7  2.5]
+				[ 7 -2.5]
+			}
+	)
+	/*
+		attitude-indicator: 
+		( Graphic
+			transform: { ( Translation -7.3 -0.60 ) ( Scale 0.195 ) }
+			components:
+			{
+				#include "attitude_indicator.epp"
+			}
+		)
+	
 
+		// ================================== AIRSPEED INDICATORS =======================================
+		
+		airspeed-indicator: 
+		( Graphic
+			transform: { ( Translation 0 1 ) ( Scale 0.1 ) }
+			components:
+			{
+				#include "airspeed_indicator.epp"
+			}
+		)
+
+		// ================================== HEADING INDICATORS ========================================
+		
+		heading-indicator:
+		( Graphic
+			transform: { ( Translation -3 1 ) ( Scale 0.12 ) (Rotation (Degrees 0)) }
+			components:
+			{
+				#include "heading_indicator.epp"
+			}
+		)
+
+		// ================================== ALTIMETER/VSIs ============================================
+		
+		altimeter-vsi:
+		( Graphic
+			transform: { ( Translation 2.5 -2 ) ( Scale 0.15 ) (Rotation (Degrees 0)) }
+			components:
+			{
+				#include "altimeter_and_vsi.epp"
+			}
+		)
+
+		// ================================== TURN COORDINATORS =========================================
+		
+		turn-coordinator:
+		( Graphic
+			transform: { ( Translation 3 1 ) ( Scale 0.1 ) ( Rotation ( Degrees 0 )) }
+			components:
+			{
+				#include "turn_coordinator.epp"
+			}
+		)
+
+		// ================================== LAT LON DISPLAY ===========================================
+
+		lat-lon-diplay:
+		( Graphic
+			transform: { ( Translation -2.5 -2 ) ( Scale 0.15 ) ( Rotation ( Degrees 0 )) }
+			components:
+			{
+				#include "lat_lon_display.epp"
+			}
+		)
+
+		// ================================== BACKGROUND ================================================
+	
+		background:
+		( Polygon
+			color: white
+			texture: t0
+			//transform: { ( Translation 0 0 ) }
+			vertices:
+			{
+				[-10 -10]
+				[-10  10]
+				[10   10]
+				[10  -10]
+			}
+
+			texCoord: {
+				[  0.0  0.0 ]
+				[  0.0  1.0 ]
+                [  1.0  1.0 ]
+                [  1.0  0.0 ]
+            }
+		)
+		*/
+	}
 )

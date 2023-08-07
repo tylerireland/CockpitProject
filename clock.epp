@@ -1,0 +1,35 @@
+year:
+( NumericReadout
+	color: ( rgb 1 0 0 )
+	transform: { ( Translation 0 0 ) ( Scale 3.0 ) }
+	format: "####"
+)
+
+month:
+( NumericReadout
+	color: ( rgb 1 0 0 )
+	transform: { ( Translation 4 0 ) ( Scale 3.0 ) }
+	format: "##"
+)
+
+day:
+( NumericReadout
+	color: ( rgb 1 0 0 )
+	transform: { ( Translation 6 0 ) ( Scale 3.0 ) }
+	format: "##"
+)
+
+hour:
+( NumericReadout
+	color: ( rgb 1 0 0 )
+	transform: { ( Translation 0 -2 ) ( Scale 3.0 ) }
+	format: "##"
+)
+
+minute:
+( NumericReadout
+	color: ( rgb 1 0 0 )
+	transform: { ( Translation 2 - 2 ) ( Scale 3.0 ) }
+	format: "##"
+)
+

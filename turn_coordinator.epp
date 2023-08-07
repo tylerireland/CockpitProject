@@ -1,0 +1,106 @@
+		falcon-logo:
+		( Rotators
+			texture: falcon-logo
+			color: white
+			vertices: 
+			{
+				[-7 -2.5]
+				[-7  2.5]
+				[ 7  2.5]
+				[ 7 -2.5]
+			}
+			texCoord: 
+			{
+				[  0.0  0.0 ]  // c
+                [  0.0  1.0 ]  // b
+                [  1.0  1.0 ]  // a
+				[  1.0  0.0 ]  // d
+				
+                
+                
+            }
+		)
+
+		( Circle
+			color: black
+			radius: 8.0
+			slices: 20
+			filled: true
+			
+		)
+
+		( Polygon
+			color: white
+			vertices: 
+			{
+				[-8.9 -0.2]
+				[-8.9  0.2]
+				[ 8.9  0.2]
+				[ 8.9 -0.2]
+			
+			}
+		)
+
+		( Polygon
+			transform: ( Rotation (Degrees 30))
+			color: white
+			vertices: 
+			{
+				[-8.9 -0.2]
+				[-8.9  0.2]
+				[ 0    0  ]
+				[ 0    0  ]
+			
+			}
+		)
+
+		( Polygon
+			transform: ( Rotation (Degrees -30))
+			color: white
+			vertices: 
+			{
+				[ 0    0  ]
+				[ 0    0  ]
+				[ 8.9  0.2]
+				[ 8.9 -0.2]
+			}
+		)
+
+		( AsciiText
+			transform: ( Translation -7.1 -5.25)
+			color: white
+			font: normal
+			text: "L"
+		)
+
+		( AsciiText
+			transform: ( Translation 6.5 -5.25)
+			color: white
+			font: normal
+			text: "R"
+		)
+
+		( Circle
+			// texture:
+			radius: 9.0
+			slices: 20
+			color: ( rgb 0.1 0.1 0.1)
+			filled: true
+		)
+
+		( Circle
+			radius: 9.1
+			filled: true
+			slices: 20
+			color: ( rgb 0.1 0.1 0.3 )
+			
+		)
+
+		( Circle
+			radius: 10.0
+			slices: 20
+			color: ( rgb  0.05 0.05 0.1 )
+			filled: true
+			
+		)
+	

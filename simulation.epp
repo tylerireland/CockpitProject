@@ -3,6 +3,9 @@
 
 simulation: 
 ( MySimulation
+	
+	latitude:   37.0  
+    longitude: -116.0
 
 	players: 
 	{ 
