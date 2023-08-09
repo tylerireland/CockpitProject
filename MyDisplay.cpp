@@ -48,6 +48,7 @@ MyDisplay::MyDisplay()
 	velocitySD.empty();
 	vsiSD.empty();
 	pitchSD.empty();
+	angleSD.empty();
 
 }
 
@@ -85,16 +86,11 @@ void MyDisplay::updateData(const double dt)
 	if (station != nullptr)
 	{
 		player = dynamic_cast<MyAircraft*>(station->getOwnship());
-		mixr::graphics::Polygon* falconLogo = dynamic_cast<mixr::graphics::Polygon*>(findByName("falcon-logo")->object());
-		mixr::graphics::Polygon* attInd = dynamic_cast<mixr::graphics::Polygon*>(findByName("pitch")->object());
 
-		//player->setControlStickRollInput(0.0);
-		//player->setControlStickPitchInput(0.0);
-
-		if (player != nullptr && falconLogo != nullptr && attInd != nullptr)
+		if (player != nullptr)
 		{
 			velocity = player->getTotalVelocity();
-			altitude = player->getAltitude();
+			altitude = player->getAltitudeFt();
 			degrees = player->getHeadingD();
 			lat = player->getLatitude();
 			lon = player->getLongitude();
@@ -105,10 +101,8 @@ void MyDisplay::updateData(const double dt)
 			{
 				prevTime = time(NULL);
 				vsi = altitude - prevAlt;
-				prevAlt = player->getAltitude();
+				prevAlt = player->getAltitudeFt();
 			}
-			
-			yPos = attInd->getMatrix()(3, 1);
 
 			heading = dynamic_cast<mixr::graphics::AsciiText*>(findByName("heading")->object());
 
@@ -121,23 +115,26 @@ void MyDisplay::updateData(const double dt)
 
 				send("heading", UPDATE_VALUE, heading, headingSD);
 			}
-		
-			send("latitude",  UPDATE_VALUE, lat, latSD);
-			send("longitude", UPDATE_VALUE, lon, lonSD);
-			send("degrees",   UPDATE_VALUE, degrees, degreesSD);
-			send("altitude",  UPDATE_VALUE, altitude, altitudeSD);
-			send("velocity",  UPDATE_VALUE, velocity, velocitySD);
-			send("vsi",       UPDATE_VALUE, vsi, vsiSD);
 
-			if (falconLogo->getMatrix()(0, 1) * (180 / pi) >= -30 && falconLogo->getMatrix()(0, 1) * (180 / pi) <= 30)
+			std::cout << roll << std::endl;
+
+			send("att-display", UPDATE_VALUE2, pitch/10, pitchSD);
+			send("falcon-logo", UPDATE_VALUE6, roll, rollSD);
+			send("latitude",    UPDATE_VALUE, lat, latSD);
+			send("longitude",   UPDATE_VALUE, lon, lonSD);
+			send("degrees",     UPDATE_VALUE, degrees, degreesSD);
+			send("altitude",    UPDATE_VALUE, altitude, altitudeSD);
+			send("velocity",    UPDATE_VALUE, velocity, velocitySD);
+			send("vsi",         UPDATE_VALUE, vsi, vsiSD);
+			
+			if (roll - prevRoll >= 1 || roll - prevRoll <= -1)
 			{
-				falconLogo->lcRotate(-curRoll + roll);
+				player->setControlStickRollInput(0.0);
 			}
-			
-			attInd->lcTranslate(0, -yPos - (pitch / 10));
-
-			curRoll = player->getRollD();
-			
+			if (pitch - prevPitch >= 1 || pitch - prevPitch <= -1)
+			{
+				player->setControlStickPitchInput(0.0);
+			}
 		}
 	}
 
@@ -153,8 +150,17 @@ bool MyDisplay::onLeft()
 {
 	if (player != nullptr)
 	{
-		player->setControlStickRollInput(0.001);
-		std::cout << player->getRollD() << std::endl;
+		if (roll <= 30)
+		{
+			player->setControlStickRollInput(0.1);
+		}
+		else
+		{
+			player->setControlStickRollInput(0);
+		}
+
+		prevRoll = player->getRollD();
+		//std::cout << player->getRollD() << std::endl;
 	}
 
 	return true;
@@ -164,8 +170,17 @@ bool MyDisplay::onRight()
 {
 	if (player != nullptr)
 	{
-		player->setControlStickRollInput(-0.001);
-		std::cout << player->getRollD() << std::endl;
+		if (roll >= -30)
+		{
+			player->setControlStickRollInput(-0.1);
+		}
+		else
+		{
+			player->setControlStickRollInput(0);
+		}
+
+		prevRoll = player->getRollD();
+		//std::cout << player->getRollD() << std::endl;
 	}
 
 	return true;
@@ -176,8 +191,8 @@ bool MyDisplay::onUp()
 {
 	if (player != nullptr)
 	{
-		player->setControlStickPitchInput(1.0);
-		std::cout << player->getPitchD() << std::endl;
+		player->setControlStickPitchInput(-0.5);
+		prevPitch = player->getPitchD();
 	}
 
 	return true;
@@ -187,8 +202,8 @@ bool MyDisplay::onDown()
 {
 	if (player != nullptr)
 	{
-		player->setControlStickPitchInput(-1.0);
-		std::cout << player->getPitchD() << std::endl;
+		player->setControlStickPitchInput(0.5);
+		prevPitch = player->getPitchD();
 	}
 
 	return true;

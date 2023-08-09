@@ -93,27 +93,33 @@
 
 	components:
 	{
-		pitch:
-		( Polygon
+		att-display:
+		( Translator
 		
-			transform: { ( Translation 0 0 ) }
-			color: ( rgb 1 1 1 )
-			texture: attitude
-			vertices:
+			components:
 			{
-				[-8 -20]
-				[-8  20]
-				[8   20]
-				[8  -20]
-			}
+				( Polygon
+					transform: { ( Translation 0 0 ) }
+					color: ( rgb 1 1 1 )
+					texture: attitude
+					vertices:
+					{
+						[-8 -20]
+						[-8  20]
+						[8   20]
+						[8  -20]
+					}
 
-			texCoord: 
-			{
-				[  0.0  0.0 ]
-				[  0.0  1.0 ]
-				[  1.0  1.0 ]
-				[  1.0  0.0 ]
+					texCoord: 
+					{
+						[  0.0  0.0 ]
+						[  0.0  1.0 ]
+						[  1.0  1.0 ]
+						[  1.0  0.0 ]
+					}
+				)
 			}
+			
 		
 		)
 		

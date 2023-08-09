@@ -6,11 +6,11 @@
         signature: ( SigSphere radius: 2.0 )
         initXPos: ( NauticalMiles 0.25 )
         initYPos: ( NauticalMiles 0 )
-        initAlt: ( Feet 60 )
-        initPitch: ( Degrees 45 )
-        initRoll: ( Degrees 0 )
+        initAlt: ( Feet 9000 )
+        initPitch: ( Degrees 0 )
+        initRoll: ( Degrees 30 )
         initHeading: ( Degrees 30 )      // Initial heading
-        initVelocity: 500
+        initVelocity: 100
         
         components: {
 

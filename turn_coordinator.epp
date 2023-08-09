@@ -1,24 +1,30 @@
 		falcon-logo:
 		( Rotators
-			texture: falcon-logo
-			color: white
-			vertices: 
+
+			components:
 			{
-				[-7 -2.5]
-				[-7  2.5]
-				[ 7  2.5]
-				[ 7 -2.5]
-			}
-			texCoord: 
-			{
-				[  0.0  0.0 ]  // c
-                [  0.0  1.0 ]  // b
-                [  1.0  1.0 ]  // a
-				[  1.0  0.0 ]  // d
+				( Polygon
+					texture: falcon-logo-tex
+					color: black
+					vertices: 
+					{
+						[-7 -2.5]
+						[-7  2.5]
+						[ 7  2.5]
+						[ 7 -2.5]
+					}
+					texCoord: 
+					{
+						[  0.0  0.0 ]  // c
+						[  0.0  1.0 ]  // b
+						[  1.0  1.0 ]  // a
+						[  1.0  0.0 ]  // d
 				
                 
                 
-            }
+					}
+				)
+			}
 		)
 
 		( Circle

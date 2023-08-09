@@ -6,6 +6,7 @@
 #include "mixr/ui/glut/GlutDisplay.hpp"
 #include "mixr/graphics/readouts/AsciiText.hpp"
 #include "mixr/graphics/Polygon.hpp"
+#include "mixr/graphics/Rotators.hpp"
 #include "MyAircraft.hpp"
 #include <cmath>
 #include <string>
@@ -19,7 +20,7 @@ class MyDisplay : public mixr::glut::GlutDisplay
 	
 public:
 	MyDisplay();
-
+	
 	void updateTC(const double dt = 0.0) final;
 	void updateData(const double dt = 0.0) final;
 	bool event(const int event, mixr::base::Object* const obj = nullptr) override;
@@ -66,10 +67,12 @@ private:
 	SendData vsiSD{};
 	
 	// Aircraft's Pitch (Degrees)
+	double prevPitch{};
 	double pitch{};
 	SendData pitchSD{};
 
 	// Aircraft's Roll (Degrees)
+	double prevRoll{};
 	double roll{};
 	SendData rollSD{};
 
@@ -80,7 +83,10 @@ private:
 	SendData lonSD{};
 
 	
-	double angle{ 0.0174532925 }; //0.0174532925 rad == 1 degree
+	double angleR{ 0.0174532925 }; //0.0174532925 rad == 1 degree
+	double angleD{ 0 };
+	SendData angleSD{};
+
 	double curAngle{-1};
 	double pi = 3.14159265358979323846;
 	double curRoll{0};
